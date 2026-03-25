@@ -27,21 +27,6 @@ export default function Navbar() {
               </span>
             </Link>
 
-            <div className="hidden md:flex gap-8">
-              <a
-                href="#hero"
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                {t("home")}
-              </a>
-              <a
-                href="#features"
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                {t("features")}
-              </a>
-            </div>
-
             <div className="md:hidden">
               <button
                 type="button"
