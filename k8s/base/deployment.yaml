@@ -16,6 +16,21 @@ spec:
       - name: horizon-bot-homepage
         image: ghcr.io/horizon-tempvoice/horizon-homepage
         imagePullPolicy: Always
+        env:
+        - name: REDIS_HOST
+          value: "redis-cache.horizon-bot.svc.cluster.local"
+        - name: REDIS_PORT
+          value: "6379"
+        - name: REDIS_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: redis-auth
+              key: username
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis-auth
+              key: password
         ports:
         - containerPort: 3000
         resources:
