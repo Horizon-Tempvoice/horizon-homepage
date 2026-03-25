@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
 import { BookOpen } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
 export default async function Connect() {
@@ -15,15 +15,24 @@ export default async function Connect() {
       <div className="w-full max-w-3xl flex flex-col md:flex-row gap-8 items-stretch sm:px-6 lg:px-8">
         <div className="feature-card bg-white/5 border border-white/10 rounded-2xl p-6 w-full">
           <div className="flex items-center gap-4 mb-6">
-            <Image src="/logo.png" alt="Horizon" width={48} height={48} className="rounded-xl" />
+            <Image
+              src="/logo.png"
+              alt="Horizon"
+              width={48}
+              height={48}
+              className="rounded-xl"
+            />
             <div>
-              <h3 className="text-white text-xl font-bold">{t("community.name")}</h3>
-              <p className="text-white/70 text-sm">{t("community.description")}</p>
+              <h3 className="text-white text-xl font-bold">
+                {t("community.name")}
+              </h3>
+              <p className="text-white/70 text-sm">
+                {t("community.description")}
+              </p>
             </div>
           </div>
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-white/70 text-sm">
-            </div>
+            <div className="flex items-center gap-2 text-white/70 text-sm"></div>
             <Link
               href="https://support.horizon-bot.cloud"
               target="_blank"

@@ -1,5 +1,5 @@
-import { Zap, Trash2, Settings } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { Settings, Trash2, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 const icons: LucideIcon[] = [Zap, Trash2, Settings];

@@ -3,7 +3,7 @@ import Redis from "ioredis";
 const getRedisClient = () => {
   const client = new Redis({
     host: process.env.REDIS_HOST || "localhost",
-    port: parseInt(process.env.REDIS_PORT || "6379"),
+    port: parseInt(process.env.REDIS_PORT || "6379", 10),
     password: process.env.REDIS_PASSWORD || undefined,
     username: process.env.REDIS_USERNAME || undefined,
     lazyConnect: true,
@@ -21,10 +21,10 @@ declare global {
   var redis: Redis | undefined;
 }
 
-const redis = global.redis ?? getRedisClient();
+const redisClient = global.redis ?? getRedisClient();
 
 if (process.env.NODE_ENV !== "production") {
-  global.redis = redis;
+  global.redis = redisClient;
 }
 
-export default redis;
+export default redisClient;

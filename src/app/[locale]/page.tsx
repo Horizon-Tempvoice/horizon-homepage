@@ -1,11 +1,11 @@
+import Connect from "@/components/Connect";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
+import GuildMarquee from "@/components/GuildMarquee";
+import Hero from "@/components/Hero";
 import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import GuildMarquee from "@/components/GuildMarquee";
-import Connect from "@/components/Connect";
 import ScrollToTop from "@/components/ScrollToTop";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (

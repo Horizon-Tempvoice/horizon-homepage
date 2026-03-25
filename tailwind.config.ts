@@ -1,9 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
@@ -23,26 +21,26 @@ const config: Config = {
       },
       keyframes: {
         gradient: {
-          "0%":   { backgroundPosition: "0% 50%" },
-          "50%":  { backgroundPosition: "100% 50%" },
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
         },
         float: {
-          "0%":   { transform: "translateY(0px)" },
-          "50%":  { transform: "translateY(-20px)" },
+          "0%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
           "100%": { transform: "translateY(0px)" },
         },
         "marquee-left": {
           from: { transform: "translateX(0)" },
-          to:   { transform: "translateX(-50%)" },
+          to: { transform: "translateX(-50%)" },
         },
         "marquee-right": {
           from: { transform: "translateX(-50%)" },
-          to:   { transform: "translateX(0)" },
+          to: { transform: "translateX(0)" },
         },
         fadeIn: {
           from: { opacity: "0", transform: "translateY(-10px)" },
-          to:   { opacity: "1", transform: "translateY(0)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       boxShadow: {

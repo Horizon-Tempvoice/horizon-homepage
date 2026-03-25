@@ -1,12 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from "react";
 import type { CachedGuild } from "@/types/guild";
 
 function accentFromId(id: string): string {
-  const colors = ["#00A0FF", "#22d3ee", "#0ea5e9", "#38bdf8", "#0070cc", "#0284c7"];
+  const colors = [
+    "#00A0FF",
+    "#22d3ee",
+    "#0ea5e9",
+    "#38bdf8",
+    "#0070cc",
+    "#0284c7",
+  ];
   let hash = 0;
   for (let i = 0; i < id.length; i++) {
     hash = (hash * 31 + id.charCodeAt(i)) >>> 0;
@@ -15,12 +22,19 @@ function accentFromId(id: string): string {
 }
 
 function formatCount(n: number): string {
-  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
-  if (n >= 1_000)     return (n / 1_000).toFixed(1).replace(/\.0$/, "") + "K";
+  if (n >= 1_000_000)
+    return `${(n / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1).replace(/\.0$/, "")}K`;
   return n.toString();
 }
 
-function GuildCard({ guild, membersLabel }: { guild: CachedGuild; membersLabel: string }) {
+function GuildCard({
+  guild,
+  membersLabel,
+}: {
+  guild: CachedGuild;
+  membersLabel: string;
+}) {
   const accent = accentFromId(guild.id);
   const initials = guild.name
     .split(" ")
@@ -30,7 +44,9 @@ function GuildCard({ guild, membersLabel }: { guild: CachedGuild; membersLabel: 
     .toUpperCase();
 
   const inner = (
-    <div className={`feature-card flex items-center gap-3 px-4 py-3 rounded-xl min-w-[180px] max-w-[240px] shrink-0${guild.vanityUrl ? " cursor-pointer" : ""}`}>
+    <div
+      className={`feature-card flex items-center gap-3 px-4 py-3 rounded-xl min-w-[180px] max-w-[240px] shrink-0${guild.vanityUrl ? " cursor-pointer" : ""}`}
+    >
       {guild.iconUrl ? (
         <Image
           src={guild.iconUrl}
@@ -54,14 +70,28 @@ function GuildCard({ guild, membersLabel }: { guild: CachedGuild; membersLabel: 
             {guild.name}
           </span>
           {guild.isVerified && (
-            <Image src="/verified.png" alt="Verified" width={14} height={14} className="shrink-0" />
+            <Image
+              src="/verified.png"
+              alt="Verified"
+              width={14}
+              height={14}
+              className="shrink-0"
+            />
           )}
           {guild.isPartnered && (
-            <Image src="/partnered.png" alt="Partnered" width={14} height={14} className="shrink-0" />
+            <Image
+              src="/partnered.png"
+              alt="Partnered"
+              width={14}
+              height={14}
+              className="shrink-0"
+            />
           )}
         </div>
         <div className="flex items-center gap-1.5 mt-0.5">
-          <span className="text-xs text-white/50">{formatCount(guild.memberCount)} {membersLabel}</span>
+          <span className="text-xs text-white/50">
+            {formatCount(guild.memberCount)} {membersLabel}
+          </span>
         </div>
       </div>
     </div>
@@ -78,21 +108,39 @@ function GuildCard({ guild, membersLabel }: { guild: CachedGuild; membersLabel: 
   return inner;
 }
 
-function MarqueeRow({ guilds, direction, membersLabel }: { guilds: CachedGuild[]; direction: "left" | "right"; membersLabel: string }) {
+function MarqueeRow({
+  guilds,
+  direction,
+  membersLabel,
+}: {
+  guilds: CachedGuild[];
+  direction: "left" | "right";
+  membersLabel: string;
+}) {
   const minCount = 10;
   const repeatCount = Math.ceil(minCount / guilds.length);
-  const doubled = [...Array(repeatCount * 2)].flatMap(() => guilds);
+  const doubled = [...Array(repeatCount * 2)].flatMap((_, rep) =>
+    guilds.map((g) => ({ guild: g, rep })),
+  );
   return (
     <div
       className="marquee-track relative overflow-x-clip py-3"
       style={{
-        maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
-        WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+        maskImage:
+          "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+        WebkitMaskImage:
+          "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
       }}
     >
-      <div className={`flex gap-3 ${direction === "left" ? "animate-marquee-left" : "animate-marquee-right"}`}>
-        {doubled.map((guild, i) => (
-          <GuildCard key={`${guild.id}-${i}`} guild={guild} membersLabel={membersLabel} />
+      <div
+        className={`flex gap-3 ${direction === "left" ? "animate-marquee-left" : "animate-marquee-right"}`}
+      >
+        {doubled.map(({ guild, rep }) => (
+          <GuildCard
+            key={`${guild.id}-rep${rep}`}
+            guild={guild}
+            membersLabel={membersLabel}
+          />
         ))}
       </div>
     </div>
@@ -130,22 +178,160 @@ export default function GuildMarquee() {
         <p className="text-xl text-white/70">{t("subtitle")}</p>
       </div>
       <div className="flex flex-col gap-3 overflow-x-clip">
-        <MarqueeRow guilds={row1} direction="left" membersLabel={t("members")} />
-        <MarqueeRow guilds={row2} direction="right" membersLabel={t("members")} />
+        <MarqueeRow
+          guilds={row1}
+          direction="left"
+          membersLabel={t("members")}
+        />
+        <MarqueeRow
+          guilds={row2}
+          direction="right"
+          membersLabel={t("members")}
+        />
       </div>
     </section>
   );
 }
 
 const DEMO_GUILDS: CachedGuild[] = [
-  { id: "1",  name: "Gaming Hub",      iconUrl: null, bannerUrl: null, memberCount: 12400,  ownerId: "u1",  boostTier: 2, vanityUrl: null, systemChannelId: null, features: [], isPartnered: false, isVerified: true },
-  { id: "2",  name: "Dev Lounge",      iconUrl: null, bannerUrl: null, memberCount: 5300,   ownerId: "u2",  boostTier: 1, vanityUrl: null, systemChannelId: null, features: [], isPartnered: true,  isVerified: false },
-  { id: "3",  name: "Anime Central",   iconUrl: null, bannerUrl: null, memberCount: 89200,  ownerId: "u3",  boostTier: 3, vanityUrl: null, systemChannelId: null, features: [], isPartnered: true,  isVerified: true },
-  { id: "4",  name: "Music Vibes",     iconUrl: null, bannerUrl: null, memberCount: 3100,   ownerId: "u4",  boostTier: 0, vanityUrl: null, systemChannelId: null, features: [], isPartnered: false, isVerified: false },
-  { id: "5",  name: "Study Together",  iconUrl: null, bannerUrl: null, memberCount: 22600,  ownerId: "u5",  boostTier: 2, vanityUrl: null, systemChannelId: null, features: [], isPartnered: false, isVerified: true },
-  { id: "6",  name: "Tech Talk",       iconUrl: null, bannerUrl: null, memberCount: 41000,  ownerId: "u6",  boostTier: 2, vanityUrl: null, systemChannelId: null, features: [], isPartnered: true,  isVerified: false },
-  { id: "7",  name: "Crypto Crew",     iconUrl: null, bannerUrl: null, memberCount: 9800,   ownerId: "u7",  boostTier: 1, vanityUrl: null, systemChannelId: null, features: [], isPartnered: false, isVerified: false },
-  { id: "8",  name: "Art Collective",  iconUrl: null, bannerUrl: null, memberCount: 15200,  ownerId: "u8",  boostTier: 2, vanityUrl: null, systemChannelId: null, features: [], isPartnered: false, isVerified: true },
-  { id: "9",  name: "Movie Nights",    iconUrl: null, bannerUrl: null, memberCount: 6700,   ownerId: "u9",  boostTier: 1, vanityUrl: null, systemChannelId: null, features: [], isPartnered: false, isVerified: false },
-  { id: "10", name: "Esports Arena",   iconUrl: null, bannerUrl: null, memberCount: 104000, ownerId: "u10", boostTier: 3, vanityUrl: null, systemChannelId: null, features: [], isPartnered: true,  isVerified: true },
+  {
+    id: "1",
+    name: "Gaming Hub",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 12400,
+    ownerId: "u1",
+    boostTier: 2,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: false,
+    isVerified: true,
+  },
+  {
+    id: "2",
+    name: "Dev Lounge",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 5300,
+    ownerId: "u2",
+    boostTier: 1,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: true,
+    isVerified: false,
+  },
+  {
+    id: "3",
+    name: "Anime Central",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 89200,
+    ownerId: "u3",
+    boostTier: 3,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: true,
+    isVerified: true,
+  },
+  {
+    id: "4",
+    name: "Music Vibes",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 3100,
+    ownerId: "u4",
+    boostTier: 0,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: false,
+    isVerified: false,
+  },
+  {
+    id: "5",
+    name: "Study Together",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 22600,
+    ownerId: "u5",
+    boostTier: 2,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: false,
+    isVerified: true,
+  },
+  {
+    id: "6",
+    name: "Tech Talk",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 41000,
+    ownerId: "u6",
+    boostTier: 2,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: true,
+    isVerified: false,
+  },
+  {
+    id: "7",
+    name: "Crypto Crew",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 9800,
+    ownerId: "u7",
+    boostTier: 1,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: false,
+    isVerified: false,
+  },
+  {
+    id: "8",
+    name: "Art Collective",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 15200,
+    ownerId: "u8",
+    boostTier: 2,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: false,
+    isVerified: true,
+  },
+  {
+    id: "9",
+    name: "Movie Nights",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 6700,
+    ownerId: "u9",
+    boostTier: 1,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: false,
+    isVerified: false,
+  },
+  {
+    id: "10",
+    name: "Esports Arena",
+    iconUrl: null,
+    bannerUrl: null,
+    memberCount: 104000,
+    ownerId: "u10",
+    boostTier: 3,
+    vanityUrl: null,
+    systemChannelId: null,
+    features: [],
+    isPartnered: true,
+    isVerified: true,
+  },
 ];

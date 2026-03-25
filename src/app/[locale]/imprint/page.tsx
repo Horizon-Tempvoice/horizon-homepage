@@ -9,7 +9,9 @@ export default function ImprintPage() {
   return (
     <LegalLayout title="Imprint" subtitle="Information according to § 5 TMG">
       <div className="not-prose feature-card rounded-2xl p-6 mb-10">
-        <p className="text-sm text-white/50 uppercase tracking-widest mb-4 font-medium">Contact</p>
+        <p className="text-sm text-white/50 uppercase tracking-widest mb-4 font-medium">
+          Contact
+        </p>
         <div className="space-y-1 text-white/80 leading-relaxed">
           <p className="font-semibold text-white">Fabian Thomys</p>
           <p>c/o COCENTER</p>
@@ -18,7 +20,9 @@ export default function ImprintPage() {
           <p>Germany</p>
         </div>
         <div className="mt-6 pt-6 border-t border-white/10">
-          <p className="text-sm text-white/50 uppercase tracking-widest mb-2 font-medium">Email</p>
+          <p className="text-sm text-white/50 uppercase tracking-widest mb-2 font-medium">
+            Email
+          </p>
           <a
             href="mailto:hello@horizon-bot.cloud"
             className="text-[#00A0FF] hover:underline"

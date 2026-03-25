@@ -19,7 +19,9 @@ export default async function Hero() {
                 {t("headlineAccent")}
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-white/70">{t("description")}</p>
+            <p className="text-lg md:text-xl text-white/70">
+              {t("description")}
+            </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:gap-8 justify-center lg:justify-start">
               <Link
                 href="https://invite.horizon-bot.cloud"
