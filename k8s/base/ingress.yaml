@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: horizon-bot-homepage
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-dns
+    external-dns.alpha.kubernetes.io/target: lb-fsn-1.diamondforge.me
+spec:
+  tls:
+  - hosts:
+    - horizon-bot.cloud
+    secretName: horizon-bot-homepage-tls
+  rules:
+  - host: horizon-bot.cloud
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: horizon-bot-homepage
+            port:
+              number: 80

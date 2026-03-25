@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: horizon-bot-homepage
+  namespace: horizon-bot
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: horizon-bot-docs=ghcr.io/horizon-tempvoice/horizon-homepage
+    argocd-image-updater.argoproj.io/horizon-bot-docs.update-strategy: digest
+    argocd-image-updater.argoproj.io/write-back-method: argocd
+spec:
+  project: horizon-bot
+  source:
+    repoURL: 'https://github.com/horizon-tempvoice/horizon-homepage.git'
+    targetRevision: main
+    path: k8s/overlays/production
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: horizon-bot
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
