@@ -5,7 +5,7 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat git openssh-client
 WORKDIR /app
 
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* source.config.ts next.config.* ./
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* next.config.* ./
 RUN \
   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
   elif [ -f package-lock.json ]; then npm ci; \
