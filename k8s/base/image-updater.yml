@@ -8,7 +8,7 @@ spec:
   writeBackConfig:
     method: argocd
   applicationRefs:
-    - namePattern: horizon-bot-docs
+    - namePattern: horizon-bot-homepage
       images:
         - alias: horizon-bot-homepage
           imageName: ghcr.io/horizon-tempvoice/horizon-homepage:latest
