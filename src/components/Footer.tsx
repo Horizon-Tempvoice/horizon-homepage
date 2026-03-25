@@ -75,10 +75,10 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                    href="https://translate.horizon-bot.cloud"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/70 hover:text-white transition-colors"
+                  href="https://translate.horizon-bot.cloud"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors"
                 >
                   {t("nav.translate")}
                 </Link>

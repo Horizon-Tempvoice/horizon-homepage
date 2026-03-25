@@ -10,7 +10,10 @@ function renderDescription(text: string) {
     const match = part.match(/^<highlight>(.*)<\/highlight>$/);
     if (match) {
       return (
-        <span key={i} className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500">
+        <span
+          key={i}
+          className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500"
+        >
           {match[1]}
         </span>
       );
@@ -39,7 +42,9 @@ export default async function Features() {
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="text-white/70">{renderDescription(item.description)}</p>
+                <p className="text-white/70">
+                  {renderDescription(item.description)}
+                </p>
               </div>
             );
           })}
