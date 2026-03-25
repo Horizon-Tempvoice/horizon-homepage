@@ -1,0 +1,69 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "features": "Funktionen",
+    "invite": "Horizon einladen"
+  },
+  "hero": {
+    "headline": "Gib deinen Nutzern",
+    "headlineAccent": "volle Kontrolle.",
+    "description": "Stell dir einen Sprachkanal vor, der nur existiert, wenn ihn jemand wirklich braucht. Sobald ein Nutzer einem 'Beitreten zum Erstellen'-Kanal beitritt, erstellt Horizon einen privaten Raum. Wenn alle gegangen sind, verschwindet er wieder.",
+    "inviteButton": "Horizon einladen",
+    "docsButton": "Dokumentation"
+  },
+  "features": {
+    "sectionTitle": "Funktionen von Horizon",
+    "sectionSubtitle": "Alles was du brauchst, um Sprachkanäle mühelos zu verwalten.",
+    "items": [
+      {
+        "title": "Sofortige Sprachkanäle",
+        "description": "Sobald ein Nutzer einem 'Beitreten zum Erstellen'-Kanal beitritt, erstellt Horizon in Millisekunden einen privaten Raum. Kein Warten, kein manuelles Einrichten."
+      },
+      {
+        "title": "Automatische Bereinigung",
+        "description": "Sobald alle den Kanal verlassen haben, wird er automatisch gelöscht. Kein Durcheinander, keine Überreste. Deine Kanalliste bleibt übersichtlich."
+      },
+      {
+        "title": "Keine Konfiguration nötig",
+        "description": "Richte einen einzigen 'Beitreten zum Erstellen'-Kanal ein und Horizon erledigt den Rest. Keine komplizierte Konfiguration, keine Berechtigungsprobleme. Es funktioniert einfach."
+      }
+    ]
+  },
+  "guildMarquee": {
+    "title": "Vertraut von deinen",
+    "titleAccent": "Lieblingsservern.",
+    "subtitle": "Genutzt von Communities jeder Größe.",
+    "members": "Mitglieder"
+  },
+  "connect": {
+    "title": "Support",
+    "subtitle": "Hol dir Support und werde Teil der Horizon-Community.",
+    "community": {
+      "name": "Horizon Community",
+      "description": "Offizieller Support-Server",
+      "joinButton": "Server beitreten"
+    },
+    "docs": {
+      "name": "Dokumentation",
+      "description": "Anleitungen & Referenzen",
+      "viewButton": "Docs ansehen"
+    }
+  },
+  "footer": {
+    "description": "Horizon ist der einfachste Weg, Sprachkanäle auf Discord zu verwalten. Temporäre Räume, die bei Bedarf erscheinen und verschwinden, wenn sie nicht mehr gebraucht werden.",
+    "quickLinks": "Schnelllinks",
+    "links": "Links",
+    "nav": {
+      "home": "Startseite",
+      "features": "Funktionen",
+      "testimonials": "Bewertungen",
+      "invite": "Einladen",
+      "support": "Support",
+      "docs": "Dokumentation",
+      "imprint": "Impressum",
+      "privacy": "Datenschutz",
+      "tos": "Nutzungsbedingungen"
+    },
+    "legal": "Alle Rechte vorbehalten. · Nicht mit Discord Inc. verbunden."
+  }
+}

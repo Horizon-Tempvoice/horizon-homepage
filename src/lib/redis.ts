@@ -1,0 +1,30 @@
+import Redis from "ioredis";
+
+const getRedisClient = () => {
+  const client = new Redis({
+    host: process.env.REDIS_HOST || "localhost",
+    port: parseInt(process.env.REDIS_PORT || "6379"),
+    password: process.env.REDIS_PASSWORD || undefined,
+    username: process.env.REDIS_USERNAME || undefined,
+    lazyConnect: true,
+  });
+
+  client.on("error", (err) => {
+    console.error("Redis error:", err);
+  });
+
+  return client;
+};
+
+declare global {
+  // eslint-disable-next-line no-var
+  var redis: Redis | undefined;
+}
+
+const redis = global.redis ?? getRedisClient();
+
+if (process.env.NODE_ENV !== "production") {
+  global.redis = redis;
+}
+
+export default redis;

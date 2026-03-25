@@ -1,0 +1,69 @@
+{
+  "navbar": {
+    "home": "Home",
+    "features": "Features",
+    "invite": "Invite Horizon"
+  },
+  "hero": {
+    "headline": "Give your users",
+    "headlineAccent": "total control.",
+    "description": "Think of it as a voice channel that only exists when someone actually needs it. When a user joins a Join to Create channel, Horizon spins up a private room. Once everyone leaves, it's gone.",
+    "inviteButton": "Invite Horizon",
+    "docsButton": "Documentation"
+  },
+  "features": {
+    "sectionTitle": "Features of Horizon",
+    "sectionSubtitle": "Everything you need to manage voice channels with ease.",
+    "items": [
+      {
+        "title": "Instant Voice Channels",
+        "description": "The moment a user joins a Join to Create channel, Horizon spins up a private room in milliseconds. No waiting, no manual setup required."
+      },
+      {
+        "title": "Automatic Cleanup",
+        "description": "Once everyone leaves, the channel is automatically deleted. No leftovers, no clutter. Your channel list stays clean without any intervention."
+      },
+      {
+        "title": "Zero Configuration",
+        "description": "Set up a single Join to Create channel and Horizon handles the rest. No complicated configs, no permission headaches. It just works."
+      }
+    ]
+  },
+  "guildMarquee": {
+    "title": "Trusted by your",
+    "titleAccent": "favorite servers.",
+    "subtitle": "Used by communities of all sizes.",
+    "members": "members"
+  },
+  "connect": {
+    "title": "Support",
+    "subtitle": "Get support and become part of the Horizon community.",
+    "community": {
+      "name": "Horizon Community",
+      "description": "Official Support Server",
+      "joinButton": "Join Server"
+    },
+    "docs": {
+      "name": "Documentation",
+      "description": "Setup guides & references",
+      "viewButton": "View Docs"
+    }
+  },
+  "footer": {
+    "description": "Horizon is the easiest way to manage voice channels on Discord. Temporary rooms that appear when needed and vanish when done.",
+    "quickLinks": "Quick Links",
+    "links": "Links",
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "testimonials": "Testimonials",
+      "invite": "Invite",
+      "support": "Support",
+      "docs": "Documentation",
+      "imprint": "Imprint",
+      "privacy": "Privacy Policy",
+      "tos": "Terms of Service"
+    },
+    "legal": "All rights reserved. · Not affiliated with Discord Inc."
+  }
+}
