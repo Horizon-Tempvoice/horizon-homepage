@@ -24,7 +24,7 @@ export default function ImprintPage() {
             Email
           </p>
           <a
-            href="mailto:hello@horizon-bot.cloud"
+            href="mailto:hello@horizon-bot[dot]cloud"
             className="text-[#00A0FF] hover:underline"
           >
             hello@horizon-bot.cloud
