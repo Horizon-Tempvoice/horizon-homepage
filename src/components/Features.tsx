@@ -6,12 +6,12 @@ const icons: LucideIcon[] = [Zap, Trash2, Settings];
 
 function renderDescription(text: string) {
   const parts = text.split(/(<highlight>.*?<\/highlight>)/g);
-  return parts.map((part, i) => {
+  return parts.map((part) => {
     const match = part.match(/^<highlight>(.*)<\/highlight>$/);
     if (match) {
       return (
         <span
-          key={i}
+          key={part}
           className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500"
         >
           {match[1]}
