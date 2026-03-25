@@ -4,6 +4,21 @@ import { getTranslations } from "next-intl/server";
 
 const icons: LucideIcon[] = [Zap, Trash2, Settings];
 
+function renderDescription(text: string) {
+  const parts = text.split(/(<highlight>.*?<\/highlight>)/g);
+  return parts.map((part, i) => {
+    const match = part.match(/^<highlight>(.*)<\/highlight>$/);
+    if (match) {
+      return (
+        <span key={i} className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500">
+          {match[1]}
+        </span>
+      );
+    }
+    return part;
+  });
+}
+
 export default async function Features() {
   const t = await getTranslations("features");
   const items = t.raw("items") as { title: string; description: string }[];
@@ -24,7 +39,7 @@ export default async function Features() {
                   <Icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="text-white/70">{item.description}</p>
+                <p className="text-white/70">{renderDescription(item.description)}</p>
               </div>
             );
           })}

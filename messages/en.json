@@ -25,7 +25,7 @@
       },
       {
         "title": "Zero Configuration",
-        "description": "Set up a single Join to Create channel and Horizon handles the rest. No complicated configs, no permission headaches. It just works."
+        "description": "Set up a single <highlight>Join to Create</highlight> channel and Horizon handles the rest. No complicated configs, no permission headaches. It just works."
       }
     ]
   },
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "description": "Horizon is the easiest way to manage voice channels on Discord. Temporary rooms that appear when needed and vanish when done.",
+    "description": "Horizon is the easiest way to manage voice channels on Discord. Temporary rooms that appear when needed and vanish when done. Everything is configurable in Discord.",
     "quickLinks": "Quick Links",
     "links": "Links",
     "nav": {
@@ -59,6 +59,7 @@
       "invite": "Invite",
       "support": "Support",
       "docs": "Documentation",
+      "translate": "Translate",
       "imprint": "Imprint",
       "privacy": "Privacy Policy",
       "tos": "Terms of Service"

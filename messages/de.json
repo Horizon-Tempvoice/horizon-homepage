@@ -25,7 +25,7 @@
       },
       {
         "title": "Keine Konfiguration nötig",
-        "description": "Richte einen einzigen 'Beitreten zum Erstellen'-Kanal ein und Horizon erledigt den Rest. Keine komplizierte Konfiguration, keine Berechtigungsprobleme. Es funktioniert einfach."
+        "description": "Richte einen einzigen <highlight>Join to create</highlight>-Kanal ein und Horizon erledigt den Rest. Keine komplizierte Konfiguration, keine Berechtigungsprobleme. Es funktioniert einfach."
       }
     ]
   },
@@ -50,7 +50,7 @@
     }
   },
   "footer": {
-    "description": "Horizon ist der einfachste Weg, Sprachkanäle auf Discord zu verwalten. Temporäre Räume, die bei Bedarf erscheinen und verschwinden, wenn sie nicht mehr gebraucht werden.",
+    "description": "Horizon ist der einfachste Weg, Sprachkanäle auf Discord zu verwalten. Temporäre Räume, die bei Bedarf erscheinen und verschwinden, wenn sie nicht mehr gebraucht werden. Alles auf Discord konfigurierbar.",
     "quickLinks": "Schnelllinks",
     "links": "Links",
     "nav": {
@@ -59,6 +59,7 @@
       "invite": "Einladen",
       "support": "Support",
       "docs": "Dokumentation",
+      "translate": "Übersetzen",
       "imprint": "Impressum",
       "privacy": "Datenschutz",
       "tos": "Nutzungsbedingungen"
