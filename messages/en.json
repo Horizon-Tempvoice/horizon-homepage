@@ -7,7 +7,7 @@
   "hero": {
     "headline": "Give your users",
     "headlineAccent": "total control.",
-    "description": "Think of it as a voice channel that only exists when someone actually needs it. When a user joins a Join to Create channel, Horizon spins up a private room. Once everyone leaves, it's gone.",
+    "description": "Think of it as a voice channel that only exists when someone actually needs it. When a user joins a <highlight>Join to Create</highlight> channel, Horizon spins up a private room. Once everyone leaves, it's gone.",
     "inviteButton": "Invite Horizon",
     "docsButton": "Documentation"
   },

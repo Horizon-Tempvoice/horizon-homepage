@@ -22,7 +22,7 @@ export default function Navbar() {
                 height={40}
                 className="rounded-lg"
               />
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00A0FF] to-[#0070cc]">
+              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500">
                 Horizon
               </span>
             </Link>

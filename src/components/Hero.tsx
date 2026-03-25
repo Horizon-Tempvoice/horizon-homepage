@@ -15,12 +15,18 @@ export default async function Hero() {
           <div className="space-y-8 text-center lg:text-left mt-16 lg:mt-0">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               {t("headline")}{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A0FF] to-[#0070cc]">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500">
                 {t("headlineAccent")}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-white/70">
-              {t("description")}
+              {t.rich("description", {
+                highlight: (chunks) => (
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500">
+                    {chunks}
+                  </span>
+                ),
+              })}
             </p>
             <div className="flex flex-col gap-4 sm:flex-row sm:gap-8 justify-center lg:justify-start">
               <Link

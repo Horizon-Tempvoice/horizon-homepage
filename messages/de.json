@@ -7,7 +7,7 @@
   "hero": {
     "headline": "Gib deinen Nutzern",
     "headlineAccent": "volle Kontrolle.",
-    "description": "Stell dir einen Sprachkanal vor, der nur existiert, wenn ihn jemand wirklich braucht. Sobald ein Nutzer einem 'Beitreten zum Erstellen'-Kanal beitritt, erstellt Horizon einen privaten Raum. Wenn alle gegangen sind, verschwindet er wieder.",
+    "description": "Stell dir einen Sprachkanal vor, der nur existiert, wenn ihn jemand wirklich braucht. Sobald ein Nutzer einem <highlight>Join to create</highlight>-Kanal beitritt, erstellt Horizon einen privaten Raum. Wenn alle gegangen sind, verschwindet er wieder.",
     "inviteButton": "Horizon einladen",
     "docsButton": "Dokumentation"
   },

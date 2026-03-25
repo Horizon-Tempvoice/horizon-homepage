@@ -171,7 +171,7 @@ export default function GuildMarquee() {
       <div className="text-center mb-16 px-4">
         <h2 className="text-5xl font-bold mb-4">
           {t("title")}{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00A0FF] to-[#0070cc]">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500">
             {t("titleAccent")}
           </span>
         </h2>
