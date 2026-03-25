@@ -5,5 +5,5 @@ resources:
   - ../../base
 
 images:
-  - name: ghcr.io/horizon-tempvoice/horizon-bot-docs
+  - name: ghcr.io/horizon-tempvoice/horizon-homepage
     newTag: latest
