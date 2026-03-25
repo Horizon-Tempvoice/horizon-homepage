@@ -11,11 +11,13 @@ on:
       - 'package.json'
       - 'pnpm-lock.yaml'
       - 'next.config.mjs'
+      - 'messages/**'
       - 'source.config.ts'
       - 'tsconfig.json'
       - 'biome.json'
       - 'postcss.config.mjs'
       - 'eslint.config.mjs'
+      - 'next-env.d.ts'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
