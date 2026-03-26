@@ -18,6 +18,8 @@ on:
       - 'postcss.config.mjs'
       - 'eslint.config.mjs'
       - 'next-env.d.ts'
+      - 'guild-overrides.json'
+      - '.github/workflows/release.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
