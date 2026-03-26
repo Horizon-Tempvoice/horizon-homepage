@@ -21,6 +21,7 @@ export async function generateMetadata({
     metadataBase: new URL(BASE_URL),
     title: "Horizon - Temporary Voice Channels",
     description: DESCRIPTION,
+    themeColor: "#00A0FF",
     alternates: {
       canonical: canonicalUrl,
       languages: {
