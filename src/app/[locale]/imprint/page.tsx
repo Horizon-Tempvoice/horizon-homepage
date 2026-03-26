@@ -3,7 +3,8 @@ import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
   title: "Imprint - Horizon",
-  description: "Legal information and contact details for Horizon, operated by Diamondforge Labs.",
+  description:
+    "Legal information and contact details for Horizon, operated by Diamondforge Labs.",
   robots: { index: false },
 };
 

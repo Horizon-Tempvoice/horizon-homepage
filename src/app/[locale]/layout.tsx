@@ -15,8 +15,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const canonicalUrl =
-    locale === "en" ? BASE_URL : `${BASE_URL}/${locale}`;
+  const canonicalUrl = locale === "en" ? BASE_URL : `${BASE_URL}/${locale}`;
 
   return {
     metadataBase: new URL(BASE_URL),
