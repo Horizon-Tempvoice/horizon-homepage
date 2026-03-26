@@ -34,7 +34,7 @@ export default async function Connect() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-white/70 text-sm"></div>
             <Link
-              href="https://support.horizon-bot.cloud"
+              href="https://support.horizon-bot.me"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
@@ -56,7 +56,7 @@ export default async function Connect() {
           </div>
           <div className="flex items-center justify-end">
             <Link
-              href="https://docs.horizon-bot.cloud"
+              href="https://docs.horizon-bot.me"
               target="_blank"
               rel="noopener noreferrer"
               className="gradient-bg hover:opacity-90 text-white text-sm font-medium px-4 py-2 rounded-lg transition-opacity"

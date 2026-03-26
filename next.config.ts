@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  allowedDevOrigins: ["horizon-bot.cloud", "localhost:3000", "192.168.179.58"],
+  allowedDevOrigins: ["horizon-bot.me", "localhost:3000", "192.168.179.58"],
 };
 
 export default withNextIntl(nextConfig);

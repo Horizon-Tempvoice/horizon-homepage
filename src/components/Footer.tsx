@@ -45,7 +45,7 @@ export default async function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="https://invite.horizon-bot.cloud"
+                  href="https://invite.horizon-bot.me"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
@@ -55,7 +55,7 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://support.horizon-bot.cloud"
+                  href="https://support.horizon-bot.me"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
@@ -65,7 +65,7 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://docs.horizon-bot.cloud"
+                  href="https://docs.horizon-bot.me"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
@@ -75,7 +75,7 @@ export default async function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://translate.horizon-bot.cloud"
+                  href="https://translate.horizon-bot.me"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"

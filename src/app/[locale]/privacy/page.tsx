@@ -3,6 +3,7 @@ import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Horizon",
+  description: "Learn how Horizon collects, uses, and protects your data when you use our Discord bot.",
 };
 
 export default function PrivacyPage() {
@@ -92,14 +93,14 @@ export default function PrivacyPage() {
       <p>
         If you wish to exercise any of these rights, please contact us at{" "}
         <a
-          href="mailto:hello@horizon-bot.cloud"
+          href="mailto:hello@horizon-bot.me"
           className="text-[#00A0FF] hover:underline"
         >
-          hello@horizon-bot.cloud
+          hello@horizon-bot.me
         </a>{" "}
         or via our{" "}
         <a
-          href="https://support.horizon-bot.cloud/"
+          href="https://support.horizon-bot.me/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#00A0FF] hover:underline"

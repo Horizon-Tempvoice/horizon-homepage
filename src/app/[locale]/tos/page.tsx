@@ -3,6 +3,7 @@ import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
   title: "Terms of Service - Horizon",
+  description: "Read the Terms of Service for using Horizon, the Discord bot for temporary voice channels.",
 };
 
 export default function TosPage() {
@@ -115,10 +116,10 @@ export default function TosPage() {
         If you have any questions about these Terms of Service, please contact
         us at{" "}
         <a
-          href="mailto:hello@horizon-bot.cloud"
+          href="mailto:hello@horizon-bot.me"
           className="text-[#00A0FF] hover:underline"
         >
-          hello@horizon-bot.cloud
+          hello@horizon-bot.me
         </a>
         .
       </p>

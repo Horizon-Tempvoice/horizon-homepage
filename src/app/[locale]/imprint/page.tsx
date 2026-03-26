@@ -3,6 +3,8 @@ import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
   title: "Imprint - Horizon",
+  description: "Legal information and contact details for Horizon, operated by Diamondforge Labs.",
+  robots: { index: false },
 };
 
 export default function ImprintPage() {
@@ -27,7 +29,7 @@ export default function ImprintPage() {
             href="mailto:hello@horizon-bot[dot]cloud"
             className="text-[#00A0FF] hover:underline"
           >
-            hello@horizon-bot.cloud
+            hello@horizon-bot.me
           </a>
         </div>
       </div>
