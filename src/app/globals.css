@@ -76,7 +76,7 @@ body {
   }
 }
 .floating {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 .shine-effect {
