@@ -22,7 +22,7 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 max-w-sm w-[calc(100vw-3rem)] bg-[#111318] border border-white/10 rounded-2xl p-6 shadow-2xl">
+    <div className="fixed bottom-6 right-6 z-50 max-w-sm w-[calc(100vw-3rem)] backdrop-blur-md bg-[#111318]/70 border border-white/10 rounded-2xl p-6 shadow-2xl">
       <p className="text-lg font-bold text-white mb-3">{t("title")}</p>
       <p className="text-sm text-[#9ba3b8] leading-relaxed mb-5">
         {t("description")}
