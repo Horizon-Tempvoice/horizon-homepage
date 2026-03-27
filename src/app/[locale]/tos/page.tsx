@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
@@ -7,7 +8,13 @@ export const metadata: Metadata = {
     "Read the Terms of Service for using Horizon, the Discord bot for temporary voice channels.",
 };
 
-export default function TosPage() {
+export default async function TosPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <LegalLayout title="Terms of Service" subtitle="Last updated: March 2025">
       <h2>Introduction</h2>

@@ -1,6 +1,8 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import CurrentYear from "./CurrentYear";
 
 export default async function Footer() {
   const t = await getTranslations("footer");
@@ -88,7 +90,11 @@ export default async function Footer() {
         </div>
         <div className="mt-12 border-t border-white/20 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} Diamondforge Labs. {t("legal")}
+            ©{" "}
+            <Suspense>
+              <CurrentYear />
+            </Suspense>{" "}
+            Diamondforge Labs. {t("legal")}
           </p>
           <div className="flex gap-6 text-sm">
             <Link

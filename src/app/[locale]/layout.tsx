@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import IntlProvider from "@/components/IntlProvider";
 import "../globals.css";
 
 const BASE_URL = "https://horizon-bot.me";
@@ -21,7 +22,6 @@ export async function generateMetadata({
     metadataBase: new URL(BASE_URL),
     title: "Horizon - Temporary Voice Channels",
     description: DESCRIPTION,
-    themeColor: "#00A0FF",
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -54,6 +54,10 @@ export async function generateMetadata({
   };
 }
 
+export const viewport: Viewport = {
+  themeColor: "#00A0FF",
+};
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -69,14 +73,16 @@ export default async function LocaleLayout({
 
   if (!hasLocale(routing.locales, locale)) notFound();
 
-  const messages = await getMessages();
+  setRequestLocale(locale);
+
+  const messages = (await import(`../../../messages/${locale}.json`)).default;
 
   return (
     <html lang={locale}>
       <body className="antialiased">
-        <NextIntlClientProvider messages={messages}>
+        <IntlProvider locale={locale} messages={messages}>
           {children}
-        </NextIntlClientProvider>
+        </IntlProvider>
       </body>
     </html>
   );

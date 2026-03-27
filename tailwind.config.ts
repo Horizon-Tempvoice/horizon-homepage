@@ -17,6 +17,8 @@ const config: Config = {
         float: "float 6s ease-in-out infinite",
         "marquee-left": "marquee-left 40s linear infinite",
         "marquee-right": "marquee-right 40s linear infinite",
+        "marquee-left-fast": "marquee-left 10s linear infinite",
+        "marquee-right-fast": "marquee-right 10s linear infinite",
         "fade-in": "fadeIn 0.2s ease-out forwards",
       },
       keyframes: {

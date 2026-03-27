@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { setRequestLocale } from "next-intl/server";
 import Connect from "@/components/Connect";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
@@ -27,7 +29,14 @@ const jsonLd = {
   },
 };
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <main className="bg-[#080a10] text-[#dde2f0] overflow-x-hidden [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#00A0FF]">
       <script
@@ -39,7 +48,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
-      <GuildMarquee />
+      <Suspense>
+        <GuildMarquee />
+      </Suspense>
       <Connect />
       <ScrollToTop />
       <Footer />

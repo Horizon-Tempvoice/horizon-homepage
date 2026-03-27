@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
@@ -7,7 +8,13 @@ export const metadata: Metadata = {
     "Learn how Horizon collects, uses, and protects your data when you use our Discord bot.",
 };
 
-export default function PrivacyPage() {
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <LegalLayout title="Privacy Policy" subtitle="Last updated: March 2025">
       <h2>Introduction</h2>

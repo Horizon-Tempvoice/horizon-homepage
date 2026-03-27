@@ -6,7 +6,10 @@ const getRedisClient = () => {
     port: parseInt(process.env.REDIS_PORT || "6379", 10),
     password: process.env.REDIS_PASSWORD || undefined,
     username: process.env.REDIS_USERNAME || undefined,
-    lazyConnect: true,
+    lazyConnect: false,
+    connectTimeout: 1000,
+    maxRetriesPerRequest: 1,
+    retryStrategy: (times) => (times >= 3 ? null : Math.min(times * 200, 1000)),
   });
 
   client.on("error", (err) => {

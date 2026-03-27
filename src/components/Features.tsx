@@ -10,10 +10,7 @@ function renderDescription(text: string) {
     const match = part.match(/^<highlight>(.*)<\/highlight>$/);
     if (match) {
       return (
-        <span
-          key={part}
-          className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-fuchsia-500"
-        >
+        <span key={part} className="text-brand">
           {match[1]}
         </span>
       );

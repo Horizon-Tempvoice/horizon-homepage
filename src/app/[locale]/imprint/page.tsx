@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import LegalLayout from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
@@ -8,7 +9,13 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-export default function ImprintPage() {
+export default async function ImprintPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <LegalLayout title="Imprint" subtitle="Information according to § 5 TMG">
       <div className="not-prose feature-card rounded-2xl p-6 mb-10">
