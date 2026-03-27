@@ -14,10 +14,6 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: "frame-ancestors https://top.gg",
           },
-          {
-            key: "X-Frame-Options",
-            value: "ALLOW-FROM https://top.gg",
-          },
         ],
       },
     ];

@@ -5,6 +5,9 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-dns
     external-dns.alpha.kubernetes.io/target: lb-fsn-1.diamondforge.me
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      more_clear_headers "X-Frame-Options";
+      more_set_headers "Content-Security-Policy: frame-ancestors https://top.gg";
 spec:
   ingressClassName: nginx-ic
   tls:
