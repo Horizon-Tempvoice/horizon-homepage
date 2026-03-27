@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { routing } from "@/i18n/routing";
 import IntlProvider from "@/components/IntlProvider";
+import { routing } from "@/i18n/routing";
 import "../globals.css";
 
 const BASE_URL = "https://horizon-bot.me";

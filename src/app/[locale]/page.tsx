@@ -1,5 +1,5 @@
-import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
+import { Suspense } from "react";
 import Connect from "@/components/Connect";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";

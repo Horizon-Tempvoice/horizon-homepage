@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { connection } from "next/server";
 import { getTranslations } from "next-intl/server";
-import type { CachedGuild } from "@/types/guild";
 import { getDisplayGuilds } from "@/lib/guilds";
+import type { CachedGuild } from "@/types/guild";
 
 function accentFromId(id: string): string {
   const colors = [

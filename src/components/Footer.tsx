@@ -1,7 +1,7 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { Suspense } from "react";
 import CurrentYear from "./CurrentYear";
 
 export default async function Footer() {
