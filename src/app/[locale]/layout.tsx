@@ -9,7 +9,7 @@ import "../globals.css";
 
 const BASE_URL = "https://horizon-bot.me";
 const DESCRIPTION =
-  "Horizon automatically spins up a private voice channel when a user joins a Join to Create channel. Once everyone leaves, the channel is deleted.";
+  "Horizon Bot – The next generation Discord bot. Automatically spins up a private voice channel when a user joins. Deleted once empty. Free to use.";
 
 export async function generateMetadata({
   params,
@@ -23,6 +23,13 @@ export async function generateMetadata({
     metadataBase: new URL(BASE_URL),
     title: "Horizon - Temporary Voice Channels",
     description: DESCRIPTION,
+    keywords: [
+      "discord bot",
+      "voice channel bot",
+      "temp voice",
+      "auto voice channel",
+      "discord voice bot",
+    ],
     alternates: {
       canonical: canonicalUrl,
       languages: {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import LegalLayout from "@/components/LegalLayout";
+import RevealEmail from "@/components/RevealEmail";
 
 export const metadata: Metadata = {
   title: "Imprint - Horizon",
@@ -49,12 +50,7 @@ export default async function ImprintPage({
           <p className="text-sm text-white/50 uppercase tracking-widest mb-2 font-medium">
             Email
           </p>
-          <a
-            href="mailto:hello@horizon-bot[dot]cloud"
-            className="text-[#00A0FF] hover:underline"
-          >
-            hello@horizon-bot.me
-          </a>
+          <RevealEmail email="hello@horizon-bot.me" />
         </div>
       </div>
     </LegalLayout>
