@@ -1,8 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function RevealEmail({ email }: { email: string }) {
+  const t = useTranslations("revealEmail");
   const [revealed, setRevealed] = useState(false);
 
   if (!revealed) {
@@ -12,7 +14,7 @@ export default function RevealEmail({ email }: { email: string }) {
         onClick={() => setRevealed(true)}
         className="text-[#00A0FF] hover:underline cursor-pointer"
       >
-        Click to reveal
+        {t("label")}
       </button>
     );
   }

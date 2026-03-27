@@ -55,6 +55,9 @@
     "privacy": "Datenschutzbestimmungen",
     "okay": "Okay"
   },
+  "revealEmail": {
+    "label": "Zum Anzeigen klicken"
+  },
   "footer": {
     "description": "Horizon ist der einfachste Weg, Sprachkanäle auf Discord zu verwalten. Temporäre Räume, die bei Bedarf erscheinen und verschwinden, wenn sie nicht mehr gebraucht werden. Alles auf Discord konfigurierbar.",
     "quickLinks": "Schnelllinks",

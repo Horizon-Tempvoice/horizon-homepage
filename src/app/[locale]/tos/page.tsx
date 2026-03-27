@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import LegalLayout from "@/components/LegalLayout";
+import RevealEmail from "@/components/RevealEmail";
 
 export const metadata: Metadata = {
   title: "Terms of Service - Horizon",
@@ -122,14 +123,7 @@ export default async function TosPage({
       <h2>Contact</h2>
       <p>
         If you have any questions about these Terms of Service, please contact
-        us at{" "}
-        <a
-          href="mailto:hello@horizon-bot.me"
-          className="text-[#00A0FF] hover:underline"
-        >
-          hello@horizon-bot.me
-        </a>
-        .
+        us at <RevealEmail email="hello@horizon-bot.me" />.
       </p>
     </LegalLayout>
   );

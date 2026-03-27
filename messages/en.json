@@ -55,6 +55,9 @@
     "privacy": "Privacy Policy",
     "okay": "Okay"
   },
+  "revealEmail": {
+    "label": "Click to reveal"
+  },
   "footer": {
     "description": "Horizon is the easiest way to manage voice channels on Discord. Temporary rooms that appear when needed and vanish when done. Everything is configurable in Discord.",
     "quickLinks": "Quick Links",
