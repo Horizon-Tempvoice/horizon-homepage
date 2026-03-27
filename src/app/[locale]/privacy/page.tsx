@@ -31,7 +31,7 @@ export default async function PrivacyPage({
 
   if (locale === "de") {
     return (
-      <LegalLayout title="Datenschutzrichtlinie" subtitle="Horizon Discord-Bot">
+      <LegalLayout title="Datenschutzrichtlinie" subtitle="Zuletzt aktualisiert: März 2025">
         <p>
           Der Horizon Discord-Bot (Anwendungs-ID: 1463545589907197996) wird von
           Fabian Thomys entwickelt und betrieben. Mit der Nutzung von Horizon –
@@ -173,7 +173,7 @@ export default async function PrivacyPage({
   }
 
   return (
-    <LegalLayout title="Privacy Policy" subtitle="Horizon Discord Bot">
+    <LegalLayout title="Privacy Policy" subtitle="Last updated: March 2025">
       <p>
         The Horizon Discord Bot (Application ID: 1463545589907197996) is
         developed and operated by Fabian Thomys. By using Horizon – whether by
