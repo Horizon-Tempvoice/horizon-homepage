@@ -5,6 +5,23 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: "frame-ancestors https://top.gg",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "ALLOW-FROM https://top.gg",
+          },
+        ],
+      },
+    ];
+  },
   cacheComponents: true,
   images: {
     remotePatterns: [
