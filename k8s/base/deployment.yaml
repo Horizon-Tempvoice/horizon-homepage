@@ -40,26 +40,15 @@ spec:
           requests:
             cpu: 100m
             memory: 256Mi
-        startupProbe:
-          httpGet:
-            path: /api/guilds
-            port: 3000
-          failureThreshold: 30
-          periodSeconds: 5
-          timeoutSeconds: 5
         livenessProbe:
           httpGet:
-            path: /api/guilds
+            path: /
             port: 3000
+          initialDelaySeconds: 30
           periodSeconds: 15
-          timeoutSeconds: 5
-          failureThreshold: 3
         readinessProbe:
-          exec:
-            command:
-            - sh
-            - -c
-            - 'response=$(wget -qO- http://localhost:3000/api/guilds) && [ "$response" != "[]" ]'
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 10
           periodSeconds: 10
-          timeoutSeconds: 5
-          failureThreshold: 3
