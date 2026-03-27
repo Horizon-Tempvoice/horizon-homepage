@@ -9,7 +9,7 @@ const getRedisClient = () => {
     lazyConnect: false,
     connectTimeout: 1000,
     maxRetriesPerRequest: 1,
-    retryStrategy: (times) => (times >= 3 ? null : Math.min(times * 200, 1000)),
+    retryStrategy: (times) => Math.min(times * 500, 30_000),
   });
 
   client.on("error", (err) => {

@@ -47,8 +47,11 @@ spec:
           initialDelaySeconds: 30
           periodSeconds: 15
         readinessProbe:
-          httpGet:
-            path: /
-            port: 3000
+          exec:
+            command:
+            - sh
+            - -c
+            - 'response=$(curl -sf http://localhost:3000/api/guilds) && [ "$response" != "[]" ]'
           initialDelaySeconds: 10
           periodSeconds: 10
+          failureThreshold: 3
