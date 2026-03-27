@@ -26,7 +26,6 @@ async function fetchFromRedis(): Promise<CachedGuild[]> {
     } while (cursor !== "0");
 
     if (keys.length === 0) {
-      _memo = { data: [], until: Date.now() + MEMO_TTL };
       return [];
     }
 
@@ -58,7 +57,6 @@ async function fetchFromRedis(): Promise<CachedGuild[]> {
     _memo = { data: filtered, until: Date.now() + MEMO_TTL };
     return filtered;
   } catch {
-    _memo = { data: [], until: Date.now() + MEMO_TTL };
     return [];
   }
 }
