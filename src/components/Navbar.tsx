@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const t = useTranslations("navbar");
@@ -23,14 +24,17 @@ export default function Navbar() {
               <span className="text-2xl font-bold text-brand">Horizon</span>
             </Link>
 
-            <Link
-              href="https://invite.horizon-bot.me"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 hover:bg-white/20 px-6 py-2 rounded-lg transition-all duration-300"
-            >
-              {t("invite")}
-            </Link>
+            <div className="flex items-center gap-3">
+              <LanguageSwitcher />
+              <Link
+                href="https://invite.horizon-bot.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 px-6 py-2 rounded-lg transition-all duration-300"
+              >
+                {t("invite")}
+              </Link>
+            </div>
           </div>
         </div>
       </div>
