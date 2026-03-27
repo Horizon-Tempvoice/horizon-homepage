@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import CookieBanner from "@/components/CookieBanner";
 import IntlProvider from "@/components/IntlProvider";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
@@ -82,6 +83,7 @@ export default async function LocaleLayout({
       <body className="antialiased">
         <IntlProvider locale={locale} messages={messages}>
           {children}
+          <CookieBanner />
         </IntlProvider>
       </body>
     </html>
