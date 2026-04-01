@@ -9,7 +9,10 @@ import "../globals.css";
 
 const BASE_URL = "https://horizon-bot.me";
 
-const CONTENT: Record<string, { title: string; description: string; keywords: string[] }> = {
+const CONTENT: Record<
+  string,
+  { title: string; description: string; keywords: string[] }
+> = {
   en: {
     title: "Horizon - Temporary Voice Channels for Discord",
     description:
