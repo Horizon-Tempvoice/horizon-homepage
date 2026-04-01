@@ -8,8 +8,46 @@ import { routing } from "@/i18n/routing";
 import "../globals.css";
 
 const BASE_URL = "https://horizon-bot.me";
-const DESCRIPTION =
-  "Horizon Bot – The next generation Discord bot. Automatically spins up a private voice channel when a user joins. Deleted once empty. Free to use.";
+
+const CONTENT: Record<string, { title: string; description: string; keywords: string[] }> = {
+  en: {
+    title: "Horizon - Temporary Voice Channels for Discord",
+    description:
+      "Horizon Bot automatically creates a private Discord voice channel when a user joins. The channel deletes itself once empty. Free, no configuration needed.",
+    keywords: [
+      "discord bot",
+      "temporary voice channels discord",
+      "temp vc bot",
+      "join to create discord",
+      "auto voice channel discord",
+      "discord voice channel bot",
+      "dynamic voice channels",
+      "private voice channel bot",
+      "discord voice room bot",
+      "horizon discord bot",
+      "free discord bot",
+      "discord utility bot",
+    ],
+  },
+  de: {
+    title: "Horizon – Temporäre Voice Kanäle für Discord",
+    description:
+      "Horizon Bot erstellt automatisch einen privaten Discord-Voice-Kanal, sobald ein Nutzer beitritt. Der Kanal löscht sich selbst, wenn er leer ist. Kostenlos, keine Konfiguration nötig.",
+    keywords: [
+      "Discord Bot",
+      "temporäre Voice Kanäle Discord",
+      "temp vc Bot",
+      "Join to Create Discord",
+      "automatischer Voice Kanal Discord",
+      "Discord Voice Channel Bot",
+      "dynamische Sprachkanäle",
+      "privater Voice Kanal Bot",
+      "Horizon Discord Bot",
+      "kostenloser Discord Bot",
+      "Discord Utility Bot",
+    ],
+  },
+};
 
 export async function generateMetadata({
   params,
@@ -18,18 +56,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const canonicalUrl = locale === "en" ? BASE_URL : `${BASE_URL}/${locale}`;
+  const content = CONTENT[locale] ?? CONTENT.en;
 
   return {
     metadataBase: new URL(BASE_URL),
-    title: "Horizon - Temporary Voice Channels",
-    description: DESCRIPTION,
-    keywords: [
-      "discord bot",
-      "voice channel bot",
-      "temp voice",
-      "auto voice channel",
-      "discord voice bot",
-    ],
+    title: content.title,
+    description: content.description,
+    keywords: content.keywords,
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -38,8 +71,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: "Horizon - Temporary Voice Channels",
-      description: DESCRIPTION,
+      title: content.title,
+      description: content.description,
       url: canonicalUrl,
       siteName: "Horizon",
       images: [
@@ -55,8 +88,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary",
-      title: "Horizon - Temporary Voice Channels",
-      description: DESCRIPTION,
+      title: content.title,
+      description: content.description,
       images: ["/logo.png"],
     },
   };
