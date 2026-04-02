@@ -3,12 +3,12 @@ import { Suspense } from "react";
 import Connect from "@/components/Connect";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
-import Showcase from "@/components/Showcase";
 import GuildMarquee from "@/components/GuildMarquee";
 import Hero from "@/components/Hero";
 import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
+import Showcase from "@/components/Showcase";
 
 const jsonLd = {
   "@context": "https://schema.org",

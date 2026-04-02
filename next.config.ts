@@ -16,7 +16,8 @@ const nextConfig: NextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value: "frame-ancestors 'self' https://*.top.gg https://top.gg",          },
+            value: "frame-ancestors 'self' https://*.top.gg https://top.gg",
+          },
         ],
       },
     ];
