@@ -16,6 +16,12 @@ export default function IframeLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        {/* Ensure top.gg iframe container CSS cannot block clicks on interactive elements */}
+        <style>{`
+          * { pointer-events: auto !important; }
+          [class*="absolute"], [class*="inset"] { pointer-events: none !important; }
+          a, button, [role="button"], input, select, textarea { pointer-events: auto !important; }
+        `}</style>
         <IntlProvider locale="en" messages={messages}>
           {children}
         </IntlProvider>
