@@ -18,8 +18,8 @@ export default async function Showcase() {
         {items.map((item, i) => (
           <div
             key={item.title}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-              i % 2 === 0 ? "" : "lg:[direction:rtl] [&>*]:[direction:ltr]"
+            className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
+              i % 2 === 0 ? "" : "md:[direction:rtl] [&>*]:[direction:ltr]"
             }`}
           >
             <div className="space-y-6">
