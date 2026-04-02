@@ -29,6 +29,28 @@
       }
     ]
   },
+  "showcase": {
+    "items": [
+      {
+        "title": "Dein Raum, deine Regeln.",
+        "description": "Umbenennen, sperren, Leute rauswerfen. Das Panel legt alles in deine Hände. Wer lieber Slash-Commands nutzt, kann das natürlich auch.",
+        "image": "/panel.png",
+        "imageAlt": "Horizon Panel"
+      },
+      {
+        "title": "Einmal konfigurieren, nie wieder anfassen.",
+        "description": "Standard-Berechtigungen festlegen, bestimmen wer umbenennen oder kicken darf, Zugriff auf Mods beschränken. Alles pro Generator, verschiedene Kanäle können verschiedene Regeln haben.",
+        "image": "/generatorconfig.png",
+        "imageAlt": "Generator Konfiguration"
+      },
+      {
+        "title": "Einstellungen speichern, jederzeit laden.",
+        "description": "Immer die gleichen Kanal-Einstellungen? Einfach in einen Slot speichern und beim nächsten Mal direkt laden. Bis zu drei Profile pro Nutzer.",
+        "image": "/sessionsave.png",
+        "imageAlt": "Session Save"
+      }
+    ]
+  },
   "guildMarquee": {
     "title": "Vertraut von deinen",
     "titleAccent": "Lieblingsservern.",
@@ -69,6 +91,7 @@
       "support": "Support",
       "docs": "Dokumentation",
       "translate": "Übersetzen",
+      "stats": "Statistiken",
       "imprint": "Impressum",
       "privacy": "Datenschutz",
       "tos": "Nutzungsbedingungen"

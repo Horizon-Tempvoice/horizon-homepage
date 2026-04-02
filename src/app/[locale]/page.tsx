@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import Connect from "@/components/Connect";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
+import Showcase from "@/components/Showcase";
 import GuildMarquee from "@/components/GuildMarquee";
 import Hero from "@/components/Hero";
 import Loader from "@/components/Loader";
@@ -48,6 +49,7 @@ export default async function Home({
       <Navbar />
       <Hero />
       <Features />
+      <Showcase />
       <Suspense>
         <GuildMarquee />
       </Suspense>

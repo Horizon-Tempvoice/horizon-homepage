@@ -29,6 +29,28 @@
       }
     ]
   },
+  "showcase": {
+    "items": [
+      {
+        "title": "Your room, your rules.",
+        "description": "Rename it, lock it, kick people out. The panel puts everything in your hands. Prefer slash commands? Those work too.",
+        "image": "/panel.png",
+        "imageAlt": "Horizon Panel"
+      },
+      {
+        "title": "Configure it once, forget it.",
+        "description": "Set default permissions, control who can rename or kick, restrict access to mods only. Everything is per-generator, so different channels can have different rules.",
+        "image": "/generatorconfig.png",
+        "imageAlt": "Generator Configuration"
+      },
+      {
+        "title": "Save your setup, reuse it anytime.",
+        "description": "Got a go-to channel setup? Save it to a slot and load it back whenever you need it. Up to three profiles per user, ready when you are.",
+        "image": "/sessionsave.png",
+        "imageAlt": "Session Save"
+      }
+    ]
+  },
   "guildMarquee": {
     "title": "Trusted by your",
     "titleAccent": "favorite servers.",
@@ -69,6 +91,7 @@
       "support": "Support",
       "docs": "Documentation",
       "translate": "Translate",
+      "stats": "Stats",
       "imprint": "Imprint",
       "privacy": "Privacy Policy",
       "tos": "Terms of Service"

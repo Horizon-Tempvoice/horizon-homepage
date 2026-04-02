@@ -85,6 +85,16 @@ export default async function Footer() {
                   {t("nav.translate")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="https://topstats.gg/discord/bots/1463545589907197996"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors"
+                >
+                  {t("nav.stats")}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
