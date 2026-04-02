@@ -8,12 +8,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: "/iframe",
         headers: [
           {
-            key: "Content-Security-Policy",
-            value: "frame-ancestors https://top.gg",
+            key: "X-Frame-Options",
+            value: "",
           },
+          {
+            key: "Content-Security-Policy",
+            value: "frame-ancestors 'self' https://*.top.gg https://top.gg",          },
         ],
       },
     ];
