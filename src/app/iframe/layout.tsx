@@ -24,6 +24,18 @@ export default function IframeLayout({
             z-index: 1;
           }
         `}</style>
+        {/* Intercept external link clicks before Next.js router can preventDefault(),
+            then open explicitly so the browser treats it as a trusted user gesture */}
+        <script dangerouslySetInnerHTML={{__html: `
+          document.addEventListener('click', function(e) {
+            var a = e.target.closest('a[target="_blank"]');
+            if (a && a.href) {
+              e.stopImmediatePropagation();
+              e.preventDefault();
+              window.open(a.href, '_blank', 'noopener,noreferrer');
+            }
+          }, true);
+        `}} />
       </head>
       <body className="antialiased">
         <IntlProvider locale="en" messages={messages}>
