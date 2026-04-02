@@ -32,7 +32,7 @@ export default async function Showcase() {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-[#00A0FF] rounded-2xl blur-3xl opacity-10" />
+              <div className="absolute inset-0 bg-[#00A0FF] rounded-2xl blur-3xl opacity-10 pointer-events-none" />
               <div className="relative">
                 <Image
                   src={item.image}
