@@ -9,9 +9,11 @@ export default function IframeLinkHandler() {
         'a[target="_blank"]',
       );
       if (a?.href) {
+        // sandbox="allow-popups" is not set by top.gg, so window.open/_blank is blocked.
+        // Switching to _top navigates the top-level window instead (requires allow-top-navigation).
         e.stopImmediatePropagation();
-        e.preventDefault();
-        window.open(a.href, "_blank", "noopener,noreferrer");
+        a.target = "_top";
+        // No preventDefault — let the browser handle navigation with the updated target.
       }
     };
     document.addEventListener("click", handler, true);
