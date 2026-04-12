@@ -23,9 +23,9 @@ export default function IframeLinkHandler() {
       // Only handle external links
       if (url.origin === window.location.origin) return;
 
-      // Force _blank (popup) — never _top (blocked by sandbox)
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
+      // Navigate inside the iframe itself — sandbox blocks both
+      // _blank (allow-popups) and _top (allow-top-navigation)
+      a.target = "_self";
     };
 
     document.addEventListener("click", handler, true);
