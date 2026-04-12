@@ -2,20 +2,32 @@
 
 import { useEffect } from "react";
 
+/**
+ * Ensures external links inside the top.gg sandboxed iframe open correctly.
+ *
+ * top.gg sets sandbox with allow-popups but NOT allow-top-navigation.
+ * So target="_blank" (popup) works, but target="_top" does not.
+ * This handler ensures all external links use _blank, never _top.
+ */
 export default function IframeLinkHandler() {
   useEffect(() => {
+    // Only activate inside a cross-origin iframe
+    if (window === window.top) return;
+
     const handler = (e: MouseEvent) => {
-      const a = (e.target as Element).closest<HTMLAnchorElement>(
-        'a[target="_blank"]',
-      );
-      if (a?.href) {
-        // sandbox="allow-popups" is not set by top.gg, so window.open/_blank is blocked.
-        // Switching to _top navigates the top-level window instead (requires allow-top-navigation).
-        e.stopImmediatePropagation();
-        a.target = "_top";
-        // No preventDefault — let the browser handle navigation with the updated target.
-      }
+      const a = (e.target as Element).closest<HTMLAnchorElement>("a[href]");
+      if (!a?.href) return;
+
+      const url = new URL(a.href, window.location.href);
+
+      // Only handle external links
+      if (url.origin === window.location.origin) return;
+
+      // Force _blank (popup) — never _top (blocked by sandbox)
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
     };
+
     document.addEventListener("click", handler, true);
     return () => document.removeEventListener("click", handler, true);
   }, []);
