@@ -23,9 +23,10 @@ export default function IframeLinkHandler() {
       // Only handle external links
       if (url.origin === window.location.origin) return;
 
-      // Navigate inside the iframe itself — sandbox blocks both
-      // _blank (allow-popups) and _top (allow-top-navigation)
-      a.target = "_self";
+      // Navigate the top-level page (allow-top-navigation-by-user-activation).
+      // Important: do NOT call stopImmediatePropagation — it breaks
+      // the browser's user-activation chain needed for sandbox permission.
+      a.target = "_top";
     };
 
     document.addEventListener("click", handler, true);
