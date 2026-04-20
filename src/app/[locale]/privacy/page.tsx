@@ -33,7 +33,7 @@ export default async function PrivacyPage({
     return (
       <LegalLayout
         title="Datenschutzrichtlinie"
-        subtitle="Zuletzt aktualisiert: März 2025"
+        subtitle="Zuletzt aktualisiert: April 2025"
       >
         <p>
           Der Horizon Discord-Bot (Anwendungs-ID: 1463545589907197996) wird von
@@ -148,6 +148,38 @@ export default async function PrivacyPage({
           <RevealEmail email="hello@horizon-bot.me" /> gestellt werden.
         </p>
 
+        <h2>7. Website-Analyse (Umami)</h2>
+        <p>
+          Auf den Websites{" "}
+          <a href="https://horizon-bot.me" className="text-[#00A0FF] hover:underline">
+            horizon-bot.me
+          </a>
+          ,{" "}
+          <a href="https://docs.horizon-bot.me" className="text-[#00A0FF] hover:underline">
+            docs.horizon-bot.me
+          </a>{" "}
+          und{" "}
+          <a href="https://dashboard.horizon-bot.me" className="text-[#00A0FF] hover:underline">
+            dashboard.horizon-bot.me
+          </a>{" "}
+          wird{" "}
+          <a
+            href="https://umami.is"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#00A0FF] hover:underline"
+          >
+            Umami
+          </a>{" "}
+          zur Analyse des Website-Traffics eingesetzt. Umami ist ein
+          datenschutzfreundliches Open-Source-Analysetool, das ohne Cookies
+          auskommt und keine personenbezogenen Daten erhebt oder speichert. Es
+          werden ausschließlich anonymisierte, aggregierte Statistiken erfasst
+          (z. B. Seitenaufrufe und allgemeine Nutzungsmuster). Eine
+          Identifizierung einzelner Personen ist damit nicht möglich. Die
+          erhobenen Daten werden nicht an Dritte weitergegeben.
+        </p>
+
         <h2>6. Einhaltung der Discord-Richtlinien</h2>
         <p>
           Horizon wird vollständig im Einklang mit den{" "}
@@ -176,7 +208,7 @@ export default async function PrivacyPage({
   }
 
   return (
-    <LegalLayout title="Privacy Policy" subtitle="Last updated: March 2025">
+    <LegalLayout title="Privacy Policy" subtitle="Last updated: April 2025">
       <p>
         The Horizon Discord Bot (Application ID: 1463545589907197996) is
         developed and operated by Fabian Thomys. By using Horizon – whether by
@@ -271,6 +303,37 @@ export default async function PrivacyPage({
       <p>
         Requests regarding these rights can be submitted by email to{" "}
         <RevealEmail email="hello@horizon-bot.me" />.
+      </p>
+
+      <h2>7. Website Analytics (Umami)</h2>
+      <p>
+        The websites{" "}
+        <a href="https://horizon-bot.me" className="text-[#00A0FF] hover:underline">
+          horizon-bot.me
+        </a>
+        ,{" "}
+        <a href="https://docs.horizon-bot.me" className="text-[#00A0FF] hover:underline">
+          docs.horizon-bot.me
+        </a>
+        , and{" "}
+        <a href="https://dashboard.horizon-bot.me" className="text-[#00A0FF] hover:underline">
+          dashboard.horizon-bot.me
+        </a>{" "}
+        use{" "}
+        <a
+          href="https://umami.is"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#00A0FF] hover:underline"
+        >
+          Umami
+        </a>{" "}
+        for website traffic analysis. Umami is a privacy-friendly, open-source
+        analytics tool that operates without cookies and does not collect or
+        store any personal data. Only anonymized, aggregated statistics are
+        recorded (e.g., page views and general usage patterns). Individual
+        users cannot be identified through this data. No data is shared with
+        third parties.
       </p>
 
       <h2>6. Discord Policy Compliance</h2>
