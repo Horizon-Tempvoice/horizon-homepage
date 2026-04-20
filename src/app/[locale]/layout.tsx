@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import Script from "next/script";
 import CookieBanner from "@/components/CookieBanner";
 import IntlProvider from "@/components/IntlProvider";
 import { routing } from "@/i18n/routing";

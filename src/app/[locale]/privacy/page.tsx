@@ -151,15 +151,24 @@ export default async function PrivacyPage({
         <h2>7. Website-Analyse (Umami)</h2>
         <p>
           Auf den Websites{" "}
-          <a href="https://horizon-bot.me" className="text-[#00A0FF] hover:underline">
+          <a
+            href="https://horizon-bot.me"
+            className="text-[#00A0FF] hover:underline"
+          >
             horizon-bot.me
           </a>
           ,{" "}
-          <a href="https://docs.horizon-bot.me" className="text-[#00A0FF] hover:underline">
+          <a
+            href="https://docs.horizon-bot.me"
+            className="text-[#00A0FF] hover:underline"
+          >
             docs.horizon-bot.me
           </a>{" "}
           und{" "}
-          <a href="https://dashboard.horizon-bot.me" className="text-[#00A0FF] hover:underline">
+          <a
+            href="https://dashboard.horizon-bot.me"
+            className="text-[#00A0FF] hover:underline"
+          >
             dashboard.horizon-bot.me
           </a>{" "}
           wird{" "}
@@ -308,15 +317,24 @@ export default async function PrivacyPage({
       <h2>7. Website Analytics (Umami)</h2>
       <p>
         The websites{" "}
-        <a href="https://horizon-bot.me" className="text-[#00A0FF] hover:underline">
+        <a
+          href="https://horizon-bot.me"
+          className="text-[#00A0FF] hover:underline"
+        >
           horizon-bot.me
         </a>
         ,{" "}
-        <a href="https://docs.horizon-bot.me" className="text-[#00A0FF] hover:underline">
+        <a
+          href="https://docs.horizon-bot.me"
+          className="text-[#00A0FF] hover:underline"
+        >
           docs.horizon-bot.me
         </a>
         , and{" "}
-        <a href="https://dashboard.horizon-bot.me" className="text-[#00A0FF] hover:underline">
+        <a
+          href="https://dashboard.horizon-bot.me"
+          className="text-[#00A0FF] hover:underline"
+        >
           dashboard.horizon-bot.me
         </a>{" "}
         use{" "}
@@ -331,9 +349,9 @@ export default async function PrivacyPage({
         for website traffic analysis. Umami is a privacy-friendly, open-source
         analytics tool that operates without cookies and does not collect or
         store any personal data. Only anonymized, aggregated statistics are
-        recorded (e.g., page views and general usage patterns). Individual
-        users cannot be identified through this data. No data is shared with
-        third parties.
+        recorded (e.g., page views and general usage patterns). Individual users
+        cannot be identified through this data. No data is shared with third
+        parties.
       </p>
 
       <h2>6. Discord Policy Compliance</h2>
