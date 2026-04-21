@@ -135,7 +135,7 @@ export default async function LocaleLayout({
           defer
           src="https://analytics.diamondforge.me/recorder.js"
           data-website-id="49c54271-ab93-41ce-a58e-0a04eaeef4b8"
-          data-sample-rate="0.2"
+          data-sample-rate="0.75"
           data-mask-level="moderate"
           data-max-duration="300000"
           strategy="afterInteractive"
