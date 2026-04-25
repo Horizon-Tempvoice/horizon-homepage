@@ -31,6 +31,12 @@ const CONTENT: Record<
       "horizon discord bot",
       "free discord bot",
       "discord utility bot",
+      "tempvoice system discord",
+      "tempvoice",
+      "discord temp voice channel bot",
+      "discord temp vc bot",
+      "discord join to create bot",
+      "horizon bot"
     ],
   },
   de: {
@@ -49,6 +55,8 @@ const CONTENT: Record<
       "Horizon Discord Bot",
       "kostenloser Discord Bot",
       "Discord Utility Bot",
+      "tempvoice system discord",
+      "tempvoice"
     ],
   },
 };
