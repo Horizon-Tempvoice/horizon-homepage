@@ -15,10 +15,19 @@ const jsonLd = {
   "@type": "SoftwareApplication",
   name: "Horizon",
   applicationCategory: "UtilitiesApplication",
+  applicationSubCategory: "Discord Bot",
   operatingSystem: "Discord",
   description:
-    "Horizon automatically spins up a private voice channel when a user joins a Join to Create channel. Once everyone leaves, the channel is deleted.",
+    "Horizon automatically creates temporary voice channels on Discord. When someone joins a Join to Create channel, Horizon spins up a private room that deletes itself once empty. Free, no configuration needed.",
   url: "https://horizon-bot.me",
+  featureList: [
+    "Temporary voice channels",
+    "Join to Create",
+    "Auto-delete empty channels",
+    "User-controlled permissions",
+    "Session profiles",
+    "Zero configuration",
+  ],
   offers: {
     "@type": "Offer",
     price: "0",

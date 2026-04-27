@@ -5,9 +5,9 @@
     "invite": "Horizon einladen"
   },
   "hero": {
-    "headline": "Gib deinen Nutzern",
-    "headlineAccent": "volle Kontrolle.",
-    "description": "Stell dir einen Sprachkanal vor, der nur existiert, wenn ihn jemand wirklich braucht. Sobald ein Nutzer einem <highlight>Join to create</highlight>-Kanal beitritt, erstellt Horizon einen privaten Raum. Wenn alle gegangen sind, verschwindet er wieder.",
+    "headline": "Temporäre Voice-Kanäle",
+    "headlineAccent": "für Discord.",
+    "description": "Gib deinen Nutzern volle Kontrolle. Stell dir einen Sprachkanal vor, der nur existiert, wenn ihn jemand wirklich braucht. Sobald ein Nutzer einem <highlight>Join to create</highlight>-Kanal beitritt, erstellt Horizon einen privaten Raum. Wenn alle gegangen sind, verschwindet er wieder.",
     "inviteButton": "Horizon einladen",
     "docsButton": "Dokumentation"
   },

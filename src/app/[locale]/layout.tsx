@@ -15,9 +15,9 @@ const CONTENT: Record<
   { title: string; description: string; keywords: string[] }
 > = {
   en: {
-    title: "Horizon - Temporary Voice Channels for Discord",
+    title: "Horizon | Temporary Voice Channels & Join to Create for Discord",
     description:
-      "Horizon Bot automatically creates a private Discord voice channel when a user joins. The channel deletes itself once empty. Free, no configuration needed.",
+      "Horizon automatically creates temporary voice channels on Discord. Join a Join to Create channel — Horizon spins up a private room that deletes itself once empty. Free, no setup needed.",
     keywords: [
       "discord bot",
       "temporary voice channels discord",
@@ -37,12 +37,19 @@ const CONTENT: Record<
       "discord temp vc bot",
       "discord join to create bot",
       "horizon bot",
+      "best discord temporary voice channel bot",
+      "discord bot auto delete voice channels",
+      "discord voice channel create on join",
+      "discord private voice room bot free",
+      "discord voice channel management bot",
+      "temporary voice rooms discord",
+      "discord bot auto create and delete voice channels",
     ],
   },
   de: {
-    title: "Horizon – Temporäre Voice Kanäle für Discord",
+    title: "Horizon | Temporäre Voice-Kanäle & Join to Create für Discord",
     description:
-      "Horizon Bot erstellt automatisch einen privaten Discord-Voice-Kanal, sobald ein Nutzer beitritt. Der Kanal löscht sich selbst, wenn er leer ist. Kostenlos, keine Konfiguration nötig.",
+      "Horizon erstellt automatisch temporäre Voice-Kanäle auf Discord. Join to Create — privater Raum, löscht sich selbst. Kostenlos, keine Konfiguration nötig.",
     keywords: [
       "Discord Bot",
       "temporäre Voice Kanäle Discord",
@@ -57,6 +64,11 @@ const CONTENT: Record<
       "Discord Utility Bot",
       "tempvoice system discord",
       "tempvoice",
+      "bester Discord Voice Kanal Bot",
+      "Discord Bot Voice Kanal automatisch löschen",
+      "temporäre Sprachräume Discord",
+      "Discord Voice Kanal erstellen beim Beitreten",
+      "Discord privater Sprachraum Bot kostenlos",
     ],
   },
 };
@@ -78,6 +90,7 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
+        "x-default": BASE_URL,
         en: BASE_URL,
         de: `${BASE_URL}/de`,
       },
