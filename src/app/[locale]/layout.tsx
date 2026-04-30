@@ -161,12 +161,6 @@ export default async function LocaleLayout({
           data-max-duration="300000"
           strategy="afterInteractive"
         />
-        <Script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "200c853a39b04e4c8d45442e730b31c8"}'
-          strategy="afterInteractive"
-        />
       </head>
       <body className="antialiased">
         <IntlProvider locale={locale} messages={messages}>
