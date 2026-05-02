@@ -21,7 +21,12 @@ export default function Navbar() {
                 height={40}
                 className="rounded-lg"
               />
-              <span className="text-2xl font-bold text-brand">Horizon</span>
+              <span className="text-2xl font-bold text-brand">
+                <span className="sm:hidden">Horizon</span>
+                <span className="hidden sm:inline">
+                  Horizon | Temporary Channels
+                </span>
+              </span>
             </Link>
 
             <div className="flex items-center gap-3">
