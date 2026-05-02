@@ -92,6 +92,36 @@
   "revealEmail": {
     "label": "Zum Anzeigen klicken"
   },
+  "faq": {
+    "sectionTitle": "Häufig gestellte Fragen",
+    "sectionSubtitle": "Alles, was du über Horizon wissen musst.",
+    "items": [
+      {
+        "question": "Was ist ein Join-to-Create-Bot für Discord?",
+        "answer": "Ein Join-to-Create-Bot erstellt sofort einen neuen Sprachkanal, wenn ein Nutzer einem festgelegten Trigger-Kanal beitritt. Mit Horizon erhalten Nutzer sofort ihren eigenen privaten Raum, ganz ohne Admin-Eingriff. Sobald alle weg sind, löscht sich der Kanal automatisch."
+      },
+      {
+        "question": "Wie erstelle ich automatisch Sprachkanäle in Discord?",
+        "answer": "Lade Horizon ein, führe /setup aus, um einen Join-to-Create-Kanal festzulegen, und Horizon erledigt den Rest. Jeder Nutzer, der diesem Kanal beitritt, erhält in Millisekunden einen eigenen temporären Sprachkanal."
+      },
+      {
+        "question": "Ist Horizon komplett kostenlos?",
+        "answer": "Ja, vollständig kostenlos. Temporäre Sprachkanäle, automatische Bereinigung, Nutzerberechtigungen, Session-Profile und kanalspezifische Moderation sind kostenlos und bleiben es für immer."
+      },
+      {
+        "question": "Ist Horizon wirklich für immer kostenlos?",
+        "answer": "Die Kernfunktionen sind und bleiben kostenlos, und kostenlose Nutzer bekommen weiterhin Updates. Ein Premium-Modell ist für die Zukunft geplant und wird zusätzliche Features bieten, aber alles was heute kostenlos ist, bleibt kostenlos. Versprochen."
+      },
+      {
+        "question": "Ist Horizon zuverlässig? Was ist mit der Uptime?",
+        "answer": "Horizon läuft auf Kubernetes mit mehreren Instanzen gleichzeitig. Fällt eine aus, übernimmt sofort eine andere. Die Datenbank ist PostgreSQL, betrieben mit CloudNativePG in einem Hochverfügbarkeits-Setup mit Streaming-Replikation und automatisierten Backups. Das gesamte Deployment läuft per GitOps vollautomatisch und wird kontinuierlich überwacht. Kein Single Point of Failure, keine manuellen Neustarts."
+      },
+      {
+        "question": "Kann ich steuern, wer meinen temporären Kanal verwaltet?",
+        "answer": "Ja. Der Kanal-Inhaber kann ihn umbenennen, ein Nutzerlimit setzen, ihn sperren, Mitglieder kicken und blockieren sowie bis zu sieben vertrauenswürdige Moderatoren ernennen, alles über Discords native UI oder Horizons Slash-Commands."
+      }
+    ]
+  },
   "footer": {
     "description": "Horizon ist der einfachste Weg, Sprachkanäle auf Discord zu verwalten. Temporäre Räume, die bei Bedarf erscheinen und verschwinden, wenn sie nicht mehr gebraucht werden. Alles auf Discord konfigurierbar.",
     "quickLinks": "Schnelllinks",

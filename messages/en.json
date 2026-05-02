@@ -92,6 +92,36 @@
   "revealEmail": {
     "label": "Click to reveal"
   },
+  "faq": {
+    "sectionTitle": "Frequently Asked Questions",
+    "sectionSubtitle": "Everything you need to know about Horizon.",
+    "items": [
+      {
+        "question": "What is a Join to Create Discord bot?",
+        "answer": "A Join to Create bot creates a new voice channel the moment a user joins a designated trigger channel. With Horizon, users join one channel and instantly get their own private room, no admin action needed. Once everyone leaves, the channel deletes itself automatically."
+      },
+      {
+        "question": "How do I automatically create voice channels in Discord?",
+        "answer": "Invite Horizon, run /setup to designate a Join to Create channel, and Horizon handles everything from there. Every user who joins that channel gets a temporary private voice channel created for them in milliseconds."
+      },
+      {
+        "question": "Is Horizon completely free?",
+        "answer": "Yes, completely free. Temporary voice channels, automatic cleanup, user permissions, session profiles, and per-channel moderation are all free and will stay free forever."
+      },
+      {
+        "question": "Is Horizon really free forever?",
+        "answer": "The core features are and will stay free, and free users will keep getting updates. A premium tier is planned for the future with extra perks, but everything that is free today will remain free. That's a promise."
+      },
+      {
+        "question": "Is Horizon reliable? What about uptime?",
+        "answer": "Horizon runs on Kubernetes with multiple replicas, so if one instance goes down another picks up immediately. The database is PostgreSQL managed by CloudNativePG, running in a high-availability setup with streaming replication and automated backups. The whole stack is deployed via GitOps and monitored continuously. No single point of failure, no manual restarts."
+      },
+      {
+        "question": "Can I control who manages my temporary voice channel?",
+        "answer": "Absolutely. The channel owner can rename it, set a user limit, lock it, kick and block members, and promote up to seven trusted moderators, all from Discord's native UI or Horizon's slash commands."
+      }
+    ]
+  },
   "footer": {
     "description": "Horizon is the easiest way to manage voice channels on Discord. Temporary rooms that appear when needed and vanish when done. Everything is configurable in Discord.",
     "quickLinks": "Quick Links",

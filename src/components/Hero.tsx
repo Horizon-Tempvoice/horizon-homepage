@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
-export default async function Hero() {
+export default async function Hero({
+  showButtons = true,
+}: {
+  showButtons?: boolean;
+}) {
   const t = await getTranslations("hero");
 
   return (
@@ -24,24 +28,26 @@ export default async function Hero() {
                 ),
               })}
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row sm:gap-8 justify-center lg:justify-start">
-              <Link
-                href="https://invite.horizon-bot.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gradient-bg shine-effect px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity duration-300"
-              >
-                {t("inviteButton")}
-              </Link>
-              <Link
-                href="https://docs.horizon-bot.me"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 px-8 py-4 rounded-xl font-semibold transition-colors duration-300"
-              >
-                {t("docsButton")}
-              </Link>
-            </div>
+            {showButtons && (
+              <div className="flex flex-col gap-4 sm:flex-row sm:gap-8 justify-center lg:justify-start">
+                <Link
+                  href="https://invite.horizon-bot.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gradient-bg shine-effect px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity duration-300"
+                >
+                  {t("inviteButton")}
+                </Link>
+                <Link
+                  href="https://docs.horizon-bot.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 px-8 py-4 rounded-xl font-semibold transition-colors duration-300"
+                >
+                  {t("docsButton")}
+                </Link>
+              </div>
+            )}
           </div>
 
           <div className="relative hidden lg:block">
