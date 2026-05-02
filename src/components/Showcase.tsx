@@ -1,57 +1,56 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import ShowcaseItem from "./ShowcaseItem";
 
-type ShowcaseItem = {
+type ShowcaseEntry = {
   title: string;
   description: string;
-  image: string;
-  imageAlt: string;
 };
 
+function renderDescription(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+    const [, label, href] = match;
+    const isExternal = /^https?:\/\//.test(href);
+    return (
+      <a
+        key={part}
+        href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+        className="text-brand underline-offset-4 hover:underline"
+      >
+        {label}
+      </a>
+    );
+  });
+}
+
 export default async function Showcase() {
-  const t = await getTranslations("showcase");
-  const items = t.raw("items") as ShowcaseItem[];
+  const [ts, tf] = await Promise.all([
+    getTranslations("showcase"),
+    getTranslations("features"),
+  ]);
+  const items = ts.raw("items") as ShowcaseEntry[];
 
   return (
-    <section className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-32">
-        {items.map((item, i) => (
-          <div
-            key={item.title}
-            className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
-              i % 2 === 0 ? "" : "md:[direction:rtl] [&>*]:[direction:ltr]"
-            }`}
-          >
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                {item.title}
-              </h2>
-              <p className="text-lg text-white/70 leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-
-            <div className="relative">
-              <div className="absolute inset-0 bg-[#00A0FF] rounded-2xl blur-3xl opacity-10 pointer-events-none" />
-              <div className="relative">
-                <Image
-                  src={item.image}
-                  alt={item.imageAlt}
-                  width={800}
-                  height={500}
-                  className="w-full h-auto rounded-2xl"
-                  priority={i === 0}
-                  style={{
-                    maskImage:
-                      "linear-gradient(to bottom, black 80%, transparent 100%)",
-                    WebkitMaskImage:
-                      "linear-gradient(to bottom, black 80%, transparent 100%)",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        ))}
+    <section id="features" className="py-32 relative">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold mb-4">{tf("sectionTitle")}</h2>
+          <p className="text-xl text-white/70">{tf("sectionSubtitle")}</p>
+        </div>
+        <div className="flex flex-col gap-24">
+          {items.map((item, i) => (
+            <ShowcaseItem
+              key={item.title}
+              index={i}
+              title={item.title}
+              description={renderDescription(item.description)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
