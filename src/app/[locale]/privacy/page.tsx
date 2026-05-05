@@ -202,9 +202,19 @@ export default async function PrivacyPage({
           ihr interagieren - durch Verhaltensmetriken, Heatmaps und
           Session-Replay -, um das Angebot zu verbessern. Die Daten zur
           Website-Nutzung werden mithilfe von First-Party-Cookies erfasst.
-          Microsoft Clarity wird nur geladen, wenn der Nutzer ausdrücklich der
-          Analyse-Nutzung zugestimmt hat. Weitere Informationen darüber, wie
-          Microsoft Daten erhebt und verwendet, sind in der{" "}
+          Rechtsgrundlage für diese Verarbeitung ist die ausdrückliche
+          Einwilligung des Nutzers gemäß Art. 6 Abs. 1 lit. a DSGVO. Microsoft
+          Clarity wird ausschließlich nach erteilter Einwilligung geladen.
+        </p>
+        <p>
+          Microsoft kann die erhobenen Daten auch für eigene Zwecke (z. B. zur
+          Verbesserung von Clarity) verarbeiten und ist in diesem Umfang als
+          gemeinsam Verantwortlicher im Sinne von Art. 26 DSGVO anzusehen. Die
+          Verarbeitung erfolgt auf Basis des zwischen Horizon und Microsoft
+          geschlossenen Datenverarbeitungsvertrags (Microsoft DPA). Die Daten
+          werden in die USA übertragen; Microsoft stützt diese Übermittlung auf
+          Standardvertragsklauseln (SCCs) gemäß Art. 46 DSGVO sowie auf das
+          EU-US Data Privacy Framework. Weitere Informationen sind in der{" "}
           <a
             href="https://privacy.microsoft.com/privacystatement"
             target="_blank"
@@ -392,10 +402,20 @@ export default async function PrivacyPage({
         </a>{" "}
         to capture how visitors use and interact with our website through
         behavioral metrics, heatmaps, and session replay in order to improve our
-        services. Website usage data is captured using first-party cookies.
-        Microsoft Clarity is only loaded after you have explicitly given consent
-        to analytics. For more information about how Microsoft collects and uses
-        your data, visit the{" "}
+        services. Website usage data is captured using first-party cookies. The
+        legal basis for this processing is your explicit consent pursuant to
+        Art. 6(1)(a) GDPR. Microsoft Clarity is only loaded after consent has
+        been given.
+      </p>
+      <p>
+        Microsoft may also process the collected data for its own purposes (e.g.
+        to improve Clarity) and is to that extent considered a joint controller
+        within the meaning of Art. 26 GDPR. The processing is based on a Data
+        Processing Agreement (Microsoft DPA) concluded between Horizon and
+        Microsoft. Data is transferred to the United States; Microsoft relies on
+        Standard Contractual Clauses (SCCs) pursuant to Art. 46 GDPR and the
+        EU-US Data Privacy Framework for such transfers. For more information,
+        visit the{" "}
         <a
           href="https://privacy.microsoft.com/privacystatement"
           target="_blank"
