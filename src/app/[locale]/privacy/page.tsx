@@ -33,7 +33,7 @@ export default async function PrivacyPage({
     return (
       <LegalLayout
         title="Datenschutzrichtlinie"
-        subtitle="Zuletzt aktualisiert: April 2025"
+        subtitle="Zuletzt aktualisiert: Mai 2026"
       >
         <p>
           Der Horizon Discord-Bot (Anwendungs-ID: 1463545589907197996) wird von
@@ -148,7 +148,7 @@ export default async function PrivacyPage({
           <RevealEmail email="hello@horizon-bot.me" /> gestellt werden.
         </p>
 
-        <h2>7. Website-Analyse (Umami)</h2>
+        <h2>7. Website-Analyse (Umami & Microsoft Clarity)</h2>
         <p>
           Auf den Websites{" "}
           <a
@@ -188,6 +188,33 @@ export default async function PrivacyPage({
           Identifizierung einzelner Personen ist damit nicht möglich. Die
           erhobenen Daten werden nicht an Dritte weitergegeben.
         </p>
+        <p>
+          Zusätzlich wird{" "}
+          <a
+            href="https://clarity.microsoft.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#00A0FF] hover:underline"
+          >
+            Microsoft Clarity
+          </a>{" "}
+          eingesetzt, um zu erfassen, wie Besucher die Website nutzen und mit
+          ihr interagieren - durch Verhaltensmetriken, Heatmaps und
+          Session-Replay -, um das Angebot zu verbessern. Die Daten zur
+          Website-Nutzung werden mithilfe von First-Party-Cookies erfasst.
+          Microsoft Clarity wird nur geladen, wenn der Nutzer ausdrücklich der
+          Analyse-Nutzung zugestimmt hat. Weitere Informationen darüber, wie
+          Microsoft Daten erhebt und verwendet, sind in der{" "}
+          <a
+            href="https://privacy.microsoft.com/privacystatement"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#00A0FF] hover:underline"
+          >
+            Microsoft-Datenschutzerklärung
+          </a>{" "}
+          zu finden.
+        </p>
 
         <h2>6. Einhaltung der Discord-Richtlinien</h2>
         <p>
@@ -217,7 +244,7 @@ export default async function PrivacyPage({
   }
 
   return (
-    <LegalLayout title="Privacy Policy" subtitle="Last updated: April 2025">
+    <LegalLayout title="Privacy Policy" subtitle="Last updated: May 2026">
       <p>
         The Horizon Discord Bot (Application ID: 1463545589907197996) is
         developed and operated by Fabian Thomys. By using Horizon – whether by
@@ -314,7 +341,7 @@ export default async function PrivacyPage({
         <RevealEmail email="hello@horizon-bot.me" />.
       </p>
 
-      <h2>7. Website Analytics (Umami)</h2>
+      <h2>7. Website Analytics (Umami & Microsoft Clarity)</h2>
       <p>
         The websites{" "}
         <a
@@ -352,6 +379,32 @@ export default async function PrivacyPage({
         recorded (e.g., page views and general usage patterns). Individual users
         cannot be identified through this data. No data is shared with third
         parties.
+      </p>
+      <p>
+        We also partner with{" "}
+        <a
+          href="https://clarity.microsoft.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#00A0FF] hover:underline"
+        >
+          Microsoft Clarity
+        </a>{" "}
+        to capture how visitors use and interact with our website through
+        behavioral metrics, heatmaps, and session replay in order to improve our
+        services. Website usage data is captured using first-party cookies.
+        Microsoft Clarity is only loaded after you have explicitly given consent
+        to analytics. For more information about how Microsoft collects and uses
+        your data, visit the{" "}
+        <a
+          href="https://privacy.microsoft.com/privacystatement"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#00A0FF] hover:underline"
+        >
+          Microsoft Privacy Statement
+        </a>
+        .
       </p>
 
       <h2>6. Discord Policy Compliance</h2>

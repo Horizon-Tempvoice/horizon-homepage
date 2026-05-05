@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import ConditionalAnalytics from "@/components/ConditionalAnalytics";
 import CookieBanner from "@/components/CookieBanner";
 import IntlProvider from "@/components/IntlProvider";
 import { routing } from "@/i18n/routing";
@@ -145,27 +145,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <Script
-          defer
-          src="https://analytics.diamondforge.me/script.js"
-          data-website-id="49c54271-ab93-41ce-a58e-0a04eaeef4b8"
-          strategy="afterInteractive"
-        />
-        <Script
-          defer
-          src="https://analytics.diamondforge.me/recorder.js"
-          data-website-id="49c54271-ab93-41ce-a58e-0a04eaeef4b8"
-          data-sample-rate="0.75"
-          data-mask-level="moderate"
-          data-max-duration="300000"
-          strategy="afterInteractive"
-        />
-      </head>
       <body className="antialiased">
         <IntlProvider locale={locale} messages={messages}>
           {children}
           <CookieBanner />
+          <ConditionalAnalytics />
         </IntlProvider>
       </body>
     </html>

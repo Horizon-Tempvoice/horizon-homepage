@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { Suspense } from "react";
+import CookieSettingsButton from "./CookieSettingsButton";
 import CurrentYear from "./CurrentYear";
 
 export default async function Footer() {
@@ -125,6 +126,7 @@ export default async function Footer() {
             >
               {t("nav.tos")}
             </Link>
+            <CookieSettingsButton />
           </div>
         </div>
       </div>
