@@ -30,7 +30,9 @@ export default function CookieBanner() {
   return (
     <div className="fixed bottom-6 right-6 z-50 max-w-sm w-[calc(100vw-3rem)] backdrop-blur-md bg-[#111318]/70 border border-white/10 rounded-2xl p-6 shadow-2xl">
       <p className="text-lg font-bold text-white mb-3">
-        <span className="md:hidden"><Cookie size={20} /></span>
+        <span className="md:hidden">
+          <Cookie size={20} />
+        </span>
         <span className="hidden md:inline">{t("title")}</span>
       </p>
       <p className="text-sm text-[#9ba3b8] leading-relaxed mb-5">
