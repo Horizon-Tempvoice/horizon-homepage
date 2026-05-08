@@ -12,7 +12,7 @@ export default async function Hero({
   return (
     <section id="hero" className="min-h-screen relative overflow-hidden">
       <div className="absolute inset-0 gradient-bg opacity-10 pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00A0FF]/10 via-[#080a10] to-[#080a10] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,160,255,0.1)_0%,#080a10_60%,#080a10_100%)] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
