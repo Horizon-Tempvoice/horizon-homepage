@@ -30,5 +30,8 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.17",
     "typescript": "^6.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@parcel/watcher", "@swc/core", "sharp"]
   }
 }
