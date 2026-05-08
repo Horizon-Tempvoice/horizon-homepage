@@ -33,6 +33,10 @@
     "typescript": "^6.0.0"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@parcel/watcher", "@swc/core", "sharp"]
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@swc/core",
+      "sharp"
+    ]
   }
 }
