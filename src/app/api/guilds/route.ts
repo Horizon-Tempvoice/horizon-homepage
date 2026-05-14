@@ -5,8 +5,12 @@ export async function GET() {
   try {
     const guilds = await getDisplayGuilds();
     const publicGuilds = guilds.map(
-      ({ ownerId: _ownerId, systemChannelId: _systemChannelId, ...rest }) =>
-        rest,
+      ({
+        ownerId: _ownerId,
+        systemChannelId: _systemChannelId,
+        features: _features,
+        ...rest
+      }) => rest,
     );
     return NextResponse.json(publicGuilds);
   } catch {
