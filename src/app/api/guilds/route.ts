@@ -4,7 +4,11 @@ import { getDisplayGuilds } from "@/lib/guilds";
 export async function GET() {
   try {
     const guilds = await getDisplayGuilds();
-    return NextResponse.json(guilds);
+    const publicGuilds = guilds.map(
+      ({ ownerId: _ownerId, systemChannelId: _systemChannelId, ...rest }) =>
+        rest,
+    );
+    return NextResponse.json(publicGuilds);
   } catch {
     return NextResponse.json([]);
   }
