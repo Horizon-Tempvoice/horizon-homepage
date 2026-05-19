@@ -84,11 +84,10 @@
     }
   },
   "cookieBanner": {
-    "title": "Cookies & Analytics",
-    "description": "We use necessary cookies to keep the site working. We also use Microsoft Clarity to understand how visitors interact with this site - this requires your consent.",
+    "title": "Cookies",
+    "description": "We only use technically necessary cookies!",
     "privacy": "Privacy Policy",
-    "necessary": "Only Necessary",
-    "acceptAll": "Accept All"
+    "okay": "Okay"
   },
   "revealEmail": {
     "label": "Click to reveal"
@@ -137,8 +136,7 @@
       "stats": "Stats",
       "imprint": "Imprint",
       "privacy": "Privacy Policy",
-      "tos": "Terms of Service",
-      "cookieSettings": "Cookie Settings"
+      "tos": "Terms of Service"
     },
     "legal": "All rights reserved. · Not affiliated with Discord Inc."
   }

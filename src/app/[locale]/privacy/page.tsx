@@ -148,7 +148,7 @@ export default async function PrivacyPage({
           <RevealEmail email="hello@horizon-bot.me" /> gestellt werden.
         </p>
 
-        <h2>7. Website-Analyse (Umami & Microsoft Clarity)</h2>
+        <h2>7. Website-Analyse (Umami)</h2>
         <p>
           Auf den Websites{" "}
           <a
@@ -187,43 +187,6 @@ export default async function PrivacyPage({
           (z. B. Seitenaufrufe und allgemeine Nutzungsmuster). Eine
           Identifizierung einzelner Personen ist damit nicht möglich. Die
           erhobenen Daten werden nicht an Dritte weitergegeben.
-        </p>
-        <p>
-          Zusätzlich wird{" "}
-          <a
-            href="https://clarity.microsoft.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#00A0FF] hover:underline"
-          >
-            Microsoft Clarity
-          </a>{" "}
-          eingesetzt, um zu erfassen, wie Besucher die Website nutzen und mit
-          ihr interagieren - durch Verhaltensmetriken, Heatmaps und
-          Session-Replay -, um das Angebot zu verbessern. Die Daten zur
-          Website-Nutzung werden mithilfe von First-Party-Cookies erfasst.
-          Rechtsgrundlage für diese Verarbeitung ist die ausdrückliche
-          Einwilligung des Nutzers gemäß Art. 6 Abs. 1 lit. a DSGVO. Microsoft
-          Clarity wird ausschließlich nach erteilter Einwilligung geladen.
-        </p>
-        <p>
-          Microsoft kann die erhobenen Daten auch für eigene Zwecke (z. B. zur
-          Verbesserung von Clarity) verarbeiten und ist in diesem Umfang als
-          gemeinsam Verantwortlicher im Sinne von Art. 26 DSGVO anzusehen. Die
-          Verarbeitung erfolgt auf Basis des zwischen Horizon und Microsoft
-          geschlossenen Datenverarbeitungsvertrags (Microsoft DPA). Die Daten
-          werden in die USA übertragen; Microsoft stützt diese Übermittlung auf
-          Standardvertragsklauseln (SCCs) gemäß Art. 46 DSGVO sowie auf das
-          EU-US Data Privacy Framework. Weitere Informationen sind in der{" "}
-          <a
-            href="https://privacy.microsoft.com/privacystatement"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#00A0FF] hover:underline"
-          >
-            Microsoft-Datenschutzerklärung
-          </a>{" "}
-          zu finden.
         </p>
 
         <h2>6. Einhaltung der Discord-Richtlinien</h2>
@@ -351,7 +314,7 @@ export default async function PrivacyPage({
         <RevealEmail email="hello@horizon-bot.me" />.
       </p>
 
-      <h2>7. Website Analytics (Umami & Microsoft Clarity)</h2>
+      <h2>7. Website Analytics (Umami)</h2>
       <p>
         The websites{" "}
         <a
@@ -389,42 +352,6 @@ export default async function PrivacyPage({
         recorded (e.g., page views and general usage patterns). Individual users
         cannot be identified through this data. No data is shared with third
         parties.
-      </p>
-      <p>
-        We also partner with{" "}
-        <a
-          href="https://clarity.microsoft.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#00A0FF] hover:underline"
-        >
-          Microsoft Clarity
-        </a>{" "}
-        to capture how visitors use and interact with our website through
-        behavioral metrics, heatmaps, and session replay in order to improve our
-        services. Website usage data is captured using first-party cookies. The
-        legal basis for this processing is your explicit consent pursuant to
-        Art. 6(1)(a) GDPR. Microsoft Clarity is only loaded after consent has
-        been given.
-      </p>
-      <p>
-        Microsoft may also process the collected data for its own purposes (e.g.
-        to improve Clarity) and is to that extent considered a joint controller
-        within the meaning of Art. 26 GDPR. The processing is based on a Data
-        Processing Agreement (Microsoft DPA) concluded between Horizon and
-        Microsoft. Data is transferred to the United States; Microsoft relies on
-        Standard Contractual Clauses (SCCs) pursuant to Art. 46 GDPR and the
-        EU-US Data Privacy Framework for such transfers. For more information,
-        visit the{" "}
-        <a
-          href="https://privacy.microsoft.com/privacystatement"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#00A0FF] hover:underline"
-        >
-          Microsoft Privacy Statement
-        </a>
-        .
       </p>
 
       <h2>6. Discord Policy Compliance</h2>
