@@ -9,7 +9,7 @@ on:
       - 'content/**'
       - 'Dockerfile'
       - 'package.json'
-      - 'pnpm-lock.yaml'
+      - 'package-lock.json'
       - 'next.config.ts'
       - 'messages/**'
       - 'source.config.ts'
@@ -38,25 +38,20 @@ jobs:
         with:
           fetch-depth: '0'
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          version: 11
-
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 25
-          cache: 'pnpm'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm ci
 
       - name: Lint
-        run: pnpm run lint
+        run: npm run lint
 
       - name: Type check
-        run: pnpm run types:check
+        run: npm run types:check
 
   docker:
     needs: test
