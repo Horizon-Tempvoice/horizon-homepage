@@ -7,6 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/imprint", "/de/imprint"],
     },
-    sitemap: "https://horizon-bot.me/sitemap.xml",
+    sitemap: [
+      "https://horizon-bot.me/sitemap.xml",
+      "https://horizon-bot.me/docs/sitemap.xml",
+    ],
   };
 }
