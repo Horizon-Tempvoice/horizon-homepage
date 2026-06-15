@@ -1,29 +1,71 @@
-const BODY = `# Horizon
+import messages from "../../../messages/en.json";
 
-> Horizon is a free Discord bot that creates temporary "Join to Create" voice channels. Join a generator channel and Horizon spins up a private voice room that deletes itself once empty. No configuration required.
+const LINKS = {
+  Invite: "https://invite.horizon-bot.me",
+  Documentation: "https://horizon-bot.me/docs",
+  "Support (Discord)": "https://support.horizon-bot.me",
+  Dashboard: "https://dashboard.horizon-bot.me",
+  Stats: "https://topstats.gg/discord/bots/1463545589907197996",
+};
 
-## What it does
-- Temporary voice channels, auto-created on join and auto-deleted when empty
-- Join to Create generator channels (up to 3 per server)
-- User-controlled permissions: rename, lock, limit, whitelist and blacklist
-- Session profiles to save and restore channel setups
-- Native Discord control panel plus slash commands
-- Web dashboard for server configuration
+function clean(text: string): string {
+  return text
+    .replace(/<\/?highlight>/g, "")
+    .replace(/https:\/\/docs\.horizon-bot\.me/g, "https://horizon-bot.me/docs");
+}
 
-## Links
-- Website: https://horizon-bot.me
-- Documentation: https://horizon-bot.me/docs
-- Quickstart: https://horizon-bot.me/docs/quickstart
-- Invite: https://invite.horizon-bot.me
-- Support (Discord): https://support.horizon-bot.me
-- Dashboard: https://dashboard.horizon-bot.me
+function build(): string {
+  const { hero, footer, features, showcase, faq } = messages;
+  const out: string[] = [];
 
-## About
-Horizon is developed by Diamondforge Labs. It is free to use, with a planned premium tier.
-`;
+  out.push("# Horizon");
+  out.push("");
+  out.push(`> ${clean(hero.headline)} ${clean(hero.headlineAccent)}`);
+  out.push("");
+  out.push(clean(hero.description));
+  out.push("");
+  out.push(clean(footer.description));
+  out.push("");
+
+  out.push(`## ${features.sectionTitle}`);
+  out.push("");
+  for (const item of features.items) {
+    out.push(`- **${clean(item.title)}**: ${clean(item.description)}`);
+  }
+  out.push("");
+
+  out.push("## What you can do");
+  out.push("");
+  for (const item of showcase.items) {
+    out.push(`- **${clean(item.title)}** ${clean(item.description)}`);
+  }
+  out.push("");
+
+  out.push(`## ${faq.sectionTitle}`);
+  out.push("");
+  for (const item of faq.items) {
+    out.push(`### ${clean(item.question)}`);
+    out.push(clean(item.answer));
+    out.push("");
+  }
+
+  out.push("## Links");
+  out.push("");
+  for (const [label, url] of Object.entries(LINKS)) {
+    out.push(`- ${label}: ${url}`);
+  }
+  out.push("");
+
+  out.push("## About");
+  out.push("");
+  out.push("Horizon is developed by Diamondforge Labs.");
+  out.push("");
+
+  return out.join("\n");
+}
 
 export function GET() {
-  return new Response(BODY, {
+  return new Response(build(), {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
   });
 }
