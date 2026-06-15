@@ -9,8 +9,7 @@ import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 import Showcase from "@/components/Showcase";
-
-const BASE_URL = "https://horizon-bot.me";
+import { SITE_URL } from "@/lib/seo";
 
 async function buildSchemas(locale: string) {
   const t = await getTranslations({ locale, namespace: "faq" });
@@ -25,9 +24,9 @@ async function buildSchemas(locale: string) {
     applicationSubCategory: "Discord Bot",
     operatingSystem: "Discord",
     description: isDE
-      ? "Horizon erstellt automatisch temporäre Voice-Kanäle auf Discord. Tritt einem Join-to-Create-Kanal bei – Horizon erstellt sofort einen privaten Raum, der sich selbst löscht. Kostenlos, keine Konfiguration nötig."
-      : "Horizon automatically creates temporary voice channels on Discord. Join a Join to Create channel — Horizon spins up a private room that deletes itself once empty. Free, no configuration needed.",
-    url: BASE_URL,
+      ? "Horizon erstellt automatisch temporäre Voice-Kanäle auf Discord. Tritt einem Join-to-Create-Kanal bei. Horizon erstellt sofort einen privaten Raum, der sich selbst löscht. Kostenlos, keine Konfiguration nötig."
+      : "Horizon automatically creates temporary voice channels on Discord. Join a Join to Create channel, and Horizon spins up a private room that deletes itself once empty. Free, no configuration needed.",
+    url: SITE_URL,
     featureList: isDE
       ? [
           "Temporäre Sprachkanäle",
@@ -51,9 +50,25 @@ async function buildSchemas(locale: string) {
       priceCurrency: "USD",
     },
     author: {
-      "@type": "Organization",
-      name: "Diamondforge Labs",
+      "@id": `${SITE_URL}/#organization`,
     },
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+  };
+
+  const organization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: "Diamondforge Labs",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    sameAs: [
+      "https://top.gg/bot/1463545589907197996",
+      "https://topstats.gg/discord/bots/1463545589907197996",
+      "https://support.horizon-bot.me",
+    ],
   };
 
   const faqPage = {
@@ -69,7 +84,7 @@ async function buildSchemas(locale: string) {
     })),
   };
 
-  return { softwareApp, faqPage };
+  return { organization, softwareApp, faqPage };
 }
 
 export default async function Home({
@@ -80,13 +95,18 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const { softwareApp, faqPage } = await buildSchemas(locale);
+  const { organization, softwareApp, faqPage } = await buildSchemas(locale);
 
   return (
     <main
       key={locale}
       className="bg-[#080a10] text-[#dde2f0] overflow-x-hidden animate-page-fade [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#00A0FF]"
     >
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static, trusted JSON-LD data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }}
+      />
       <script
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: static, trusted JSON-LD data

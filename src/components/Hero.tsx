@@ -54,7 +54,7 @@ export default async function Hero({
             <div className="absolute inset-0 bg-[#00A0FF] rounded-3xl blur-3xl opacity-20 pointer-events-none" />
             <Image
               src="/logo.png"
-              alt="Horizon Discord Bot – Temporary Voice Channels"
+              alt="Horizon Discord Bot - Temporary Voice Channels"
               width={480}
               height={480}
               className="relative rounded-3xl w-full max-w-md mx-auto floating"

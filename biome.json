@@ -39,5 +39,11 @@
         "organizeImports": "on"
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/opengraph-image.tsx"],
+      "linter": { "rules": { "performance": { "noImgElement": "off" } } }
+    }
+  ]
 }

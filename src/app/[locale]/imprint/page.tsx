@@ -2,13 +2,22 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import LegalLayout from "@/components/LegalLayout";
 import RevealEmail from "@/components/RevealEmail";
+import { localizedAlternates } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Imprint - Horizon",
-  description:
-    "Legal information and contact details for Horizon, operated by Diamondforge Labs.",
-  robots: { index: false },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: "Imprint - Horizon",
+    description:
+      "Legal information and contact details for Horizon, operated by Diamondforge Labs.",
+    robots: { index: false },
+    alternates: localizedAlternates("/imprint", locale),
+  };
+}
 
 export default async function ImprintPage({
   params,

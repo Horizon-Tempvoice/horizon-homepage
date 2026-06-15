@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/imprint", "/de/imprint"],
+      disallow: ["/api/"],
     },
     sitemap: [
       "https://horizon-bot.me/sitemap.xml",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import LegalLayout from "@/components/LegalLayout";
 import RevealEmail from "@/components/RevealEmail";
+import { localizedAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -18,6 +19,7 @@ export async function generateMetadata({
       locale === "de"
         ? "Erfahre, welche Daten Horizon erhebt, wie sie verwendet werden und welche Rechte dir zustehen."
         : "Learn how Horizon collects, uses, and protects your data when you use our Discord bot.",
+    alternates: localizedAlternates("/privacy", locale),
   };
 }
 
@@ -37,9 +39,9 @@ export default async function PrivacyPage({
       >
         <p>
           Der Horizon Discord-Bot (Anwendungs-ID: 1463545589907197996) wird von
-          Fabian Thomys entwickelt und betrieben. Mit der Nutzung von Horizon –
+          Fabian Thomys entwickelt und betrieben. Mit der Nutzung von Horizon,
           sei es durch das Hinzufügen zu einem Server oder durch direkte
-          Interaktion mit dem Bot – wird diese Datenschutzrichtlinie akzeptiert.
+          Interaktion mit dem Bot, wird diese Datenschutzrichtlinie akzeptiert.
           Sie legt fest, welche Daten erhoben werden, wie mit ihnen umgegangen
           wird und welche Rechte Nutzern zustehen. Wer dieser Richtlinie nicht
           zustimmt, darf Horizon nicht verwenden.
@@ -220,11 +222,11 @@ export default async function PrivacyPage({
     <LegalLayout title="Privacy Policy" subtitle="Last updated: May 2026">
       <p>
         The Horizon Discord Bot (Application ID: 1463545589907197996) is
-        developed and operated by Fabian Thomys. By using Horizon – whether by
-        adding it to a server or interacting with it directly – you agree to
-        this Privacy Policy. It outlines what data is collected, how it is
-        handled, and what rights users have. If you do not agree to this policy,
-        you may not use Horizon.
+        developed and operated by Fabian Thomys. By using Horizon, whether by
+        adding it to a server or interacting with it directly, you agree to this
+        Privacy Policy. It outlines what data is collected, how it is handled,
+        and what rights users have. If you do not agree to this policy, you may
+        not use Horizon.
       </p>
 
       <h2>1. Data Collected</h2>
