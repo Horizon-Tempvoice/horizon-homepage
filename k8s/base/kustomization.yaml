@@ -12,5 +12,6 @@ resources:
   - service.yaml
   - middleware.yaml
   - ingress.yaml
+  - ingress-docs.yaml
   - image-updater.yml
   - pdb.yaml

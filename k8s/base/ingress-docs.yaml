@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: horizon-bot-docs-path
+  # No cert-manager / external-dns annotations on purpose: the horizon-bot.me
+  # cert and DNS record are owned by the main horizon-bot-homepage ingress.
+  # This ingress only adds a /docs route on the same host pointing at the docs
+  # service. It deliberately does NOT carry the homepage headers middleware,
+  # so the docs do not inherit the homepage CSP/X-Frame-Options.
+spec:
+  ingressClassName: traefik
+  tls:
+  - hosts:
+    - horizon-bot.me
+    secretName: horizon-bot-homepage-tls
+  rules:
+  - host: horizon-bot.me
+    http:
+      paths:
+      - path: /docs
+        pathType: Prefix
+        backend:
+          service:
+            name: horizon-bot-docs
+            port:
+              number: 80
