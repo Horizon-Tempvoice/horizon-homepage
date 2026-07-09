@@ -30,6 +30,15 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        source: "/((?!iframe).*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: "frame-ancestors 'self' https://analytics.diamondforge.me",
+          },
+        ],
+      },
+      {
         source: "/iframe",
         headers: [
           {
