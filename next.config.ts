@@ -3,9 +3,40 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
+const DOC_REDIRECTS: Array<[string, string]> = [
+  ["/features", "/docs/features"],
+  ["/panel", "/docs/panel"],
+  ["/mod", "/docs/mod"],
+  ["/quickstart", "/docs/quickstart"],
+  ["/control-channel", "/docs/control-channel"],
+  ["/session", "/docs/session"],
+  ["/session/autosave", "/docs/session/autosave"],
+  ["/bitrate", "/docs/control-channel/bitrate"],
+  ["/control-channel/bitrate", "/docs/control-channel/bitrate"],
+  ["/claim", "/docs/control-channel/claim"],
+  ["/block", "/docs/control-channel/block"],
+  ["/configure-channel", "/docs/configure-channel/overview"],
+  [
+    "/configure-channel/placeholder/OWNER_NICK",
+    "/docs/configure-channel/placeholder/OWNER_NICK",
+  ],
+  [
+    "/configure-channel/placeholder/OWNER_USERNAME",
+    "/docs/configure-channel/placeholder/OWNER_USERNAME",
+  ],
+  ["/commands", "/docs"],
+];
+
 const nextConfig: NextConfig = {
   output: "standalone",
   poweredByHeader: false,
+  async redirects() {
+    return DOC_REDIRECTS.map(([source, destination]) => ({
+      source,
+      destination,
+      permanent: true,
+    }));
+  },
   async headers() {
     return [
       {

@@ -11,14 +11,14 @@ import "../globals.css";
 
 const CONTENT: Record<string, { title: string; description: string }> = {
   en: {
-    title: "Horizon | Temporary Voice Channels & Join to Create for Discord",
+    title: "Horizon | Temporary Voice Channel Bot for Discord",
     description:
-      "Horizon automatically creates temporary voice channels on Discord. Join a Join to Create channel, and Horizon spins up a private room that deletes itself once empty. Free, no setup needed.",
+      "Horizon is a free Discord bot for temporary voice channels. Join a Join to Create channel and get a private room that deletes itself once empty. No setup needed.",
   },
   de: {
-    title: "Horizon | Temporäre Voice-Kanäle & Join to Create für Discord",
+    title: "Horizon | Temporärer Voice-Channel-Bot für Discord",
     description:
-      "Horizon erstellt automatisch temporäre Voice-Kanäle auf Discord. Join to Create: privater Raum, löscht sich selbst. Kostenlos, keine Konfiguration nötig.",
+      "Horizon ist ein kostenloser Discord-Bot für temporäre Voice-Kanäle. Join to Create: privater Raum, der sich selbst löscht, sobald er leer ist. Keine Einrichtung nötig.",
   },
 };
 

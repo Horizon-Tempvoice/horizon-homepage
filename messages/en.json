@@ -33,33 +33,27 @@
     "items": [
       {
         "title": "Your room, your rules.",
-        "description": "Rename it, lock it, kick people out. The [panel](https://docs.horizon-bot.me/panel) puts everything in your hands. Prefer [slash commands](https://docs.horizon-bot.me/control-channel)? Those work too.",
-        "image": "/panel.png",
-        "imageAlt": "Horizon Panel"
+        "description": "Rename it, lock it, kick people out. The [panel](/docs/panel) puts everything in your hands. Prefer [slash commands](/docs/control-channel)? Those work too."
       },
       {
         "title": "Configure it once, forget it.",
-        "description": "Set default permissions, control who can rename or kick, restrict access to mods only. Everything is per-generator, so different channels can have different rules. [Easy setup with /setup](https://docs.horizon-bot.me/quickstart).",
-        "image": "/generatorconfig.png",
-        "imageAlt": "Generator Configuration"
+        "description": "Set default permissions, control who can rename or kick, restrict access to mods only. Everything is per-generator, so different channels can have different rules. [Easy setup with /setup](/docs/quickstart)."
       },
       {
         "title": "Save your setup, reuse it anytime.",
-        "description": "Got a go-to channel setup? [Save it to a slot](https://docs.horizon-bot.me/session) and load it back whenever you need it. Up to three profiles per user, ready when you are.",
-        "image": "/sessionsave.png",
-        "imageAlt": "Session Save"
+        "description": "Got a go-to channel setup? [Save it to a slot](/docs/session) and load it back whenever you need it. Up to three profiles per user, ready when you are."
       },
       {
         "title": "You don't have to do it alone.",
-        "description": "Promote up to seven trusted members to [channel moderators](https://docs.horizon-bot.me/mod) right from Discord. They can kick, block, manage the trusted list, and invite. They never take ownership, and all assignments clear automatically when the channel closes."
+        "description": "Promote up to seven trusted members to [channel moderators](/docs/mod) right from Discord. They can kick, block, manage the trusted list, and invite. They never take ownership, and all assignments clear automatically when the channel closes."
       },
       {
         "title": "Know what's going on, instantly.",
-        "description": "Horizon posts short [activity logs](https://docs.horizon-bot.me/features#in-channel-log-for-members) right inside your channel. Joined, left, claimed, transferred. Everyone in the room sees exactly what's happening, no external bot needed. Server admins can configure which events to track."
+        "description": "Horizon posts short [activity logs](/docs/features#in-channel-log-for-members) right inside your channel. Joined, left, claimed, transferred. Everyone in the room sees exactly what's happening, no external bot needed. Server admins can configure which events to track."
       },
       {
         "title": "Still not convinced?",
-        "description": "There's plenty more under the hood. Take a look at our [full documentation](https://docs.horizon-bot.me/) for everything Horizon can do."
+        "description": "There's plenty more under the hood. Take a look at our [full documentation](/docs) for everything Horizon can do."
       }
     ]
   },

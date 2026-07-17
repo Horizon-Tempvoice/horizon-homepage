@@ -2,19 +2,14 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import LegalLayout from "@/components/LegalLayout";
 import RevealEmail from "@/components/RevealEmail";
-import { localizedAlternates } from "@/lib/seo";
+import { enOnlyAlternates } from "@/lib/seo";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Terms of Service - Horizon",
     description:
       "Read the Terms of Service for using Horizon, the Discord bot for temporary voice channels.",
-    alternates: localizedAlternates("/tos", locale),
+    alternates: enOnlyAlternates("/tos"),
   };
 }
 

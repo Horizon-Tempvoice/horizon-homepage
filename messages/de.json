@@ -33,33 +33,27 @@
     "items": [
       {
         "title": "Dein Raum, deine Regeln.",
-        "description": "Umbenennen, sperren, Leute rauswerfen. Das [Panel](https://docs.horizon-bot.me/panel) legt alles in deine Hände. Wer lieber [Slash-Commands](https://docs.horizon-bot.me/control-channel) nutzt, kann das natürlich auch.",
-        "image": "/panel.png",
-        "imageAlt": "Horizon Panel"
+        "description": "Umbenennen, sperren, Leute rauswerfen. Das [Panel](/docs/panel) legt alles in deine Hände. Wer lieber [Slash-Commands](/docs/control-channel) nutzt, kann das natürlich auch."
       },
       {
         "title": "Einmal konfigurieren, nie wieder anfassen.",
-        "description": "Standard-Berechtigungen festlegen, bestimmen wer umbenennen oder kicken darf, Zugriff auf Mods beschränken. Alles pro Generator, verschiedene Kanäle können verschiedene Regeln haben. [Einfaches Setup mit /setup](https://docs.horizon-bot.me/quickstart).",
-        "image": "/generatorconfig.png",
-        "imageAlt": "Generator Konfiguration"
+        "description": "Standard-Berechtigungen festlegen, bestimmen wer umbenennen oder kicken darf, Zugriff auf Mods beschränken. Alles pro Generator, verschiedene Kanäle können verschiedene Regeln haben. [Einfaches Setup mit /setup](/docs/quickstart)."
       },
       {
         "title": "Einstellungen speichern, jederzeit laden.",
-        "description": "Immer die gleichen Kanal-Einstellungen? [Einfach in einen Slot speichern](https://docs.horizon-bot.me/session) und beim nächsten Mal direkt laden. Bis zu drei Profile pro Nutzer.",
-        "image": "/sessionsave.png",
-        "imageAlt": "Session Save"
+        "description": "Immer die gleichen Kanal-Einstellungen? [Einfach in einen Slot speichern](/docs/session) und beim nächsten Mal direkt laden. Bis zu drei Profile pro Nutzer."
       },
       {
         "title": "Du musst es nicht alleine stemmen.",
-        "description": "Bis zu sieben vertrauenswürdige Mitglieder direkt aus Discord heraus zu [Channel-Moderatoren](https://docs.horizon-bot.me/mod) befördern. Sie können kicken, blocken, die Trusted-Liste verwalten und einladen. Owner werden sie nie, und beim Schließen des Kanals verschwinden alle Zuweisungen automatisch."
+        "description": "Bis zu sieben vertrauenswürdige Mitglieder direkt aus Discord heraus zu [Channel-Moderatoren](/docs/mod) befördern. Sie können kicken, blocken, die Trusted-Liste verwalten und einladen. Owner werden sie nie, und beim Schließen des Kanals verschwinden alle Zuweisungen automatisch."
       },
       {
         "title": "Immer wissen, was läuft.",
-        "description": "Horizon postet kurze [Aktivitäts-Logs](https://docs.horizon-bot.me/features#in-channel-log-for-members) direkt im Kanal. Beigetreten, verlassen, übernommen, übertragen. So weiß jeder im Channel sofort was passiert, ganz ohne externen Bot. Server-Admins können konfigurieren, welche Events getrackt werden."
+        "description": "Horizon postet kurze [Aktivitäts-Logs](/docs/features#in-channel-log-for-members) direkt im Kanal. Beigetreten, verlassen, übernommen, übertragen. So weiß jeder im Channel sofort was passiert, ganz ohne externen Bot. Server-Admins können konfigurieren, welche Events getrackt werden."
       },
       {
         "title": "Immer noch nicht überzeugt?",
-        "description": "Da steckt noch einiges mehr unter der Haube. Schau in unsere [komplette Dokumentation](https://docs.horizon-bot.me/) für alles, was Horizon kann."
+        "description": "Da steckt noch einiges mehr unter der Haube. Schau in unsere [komplette Dokumentation](/docs) für alles, was Horizon kann."
       }
     ]
   },

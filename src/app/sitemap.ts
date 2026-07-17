@@ -1,13 +1,14 @@
 import { execSync } from "node:child_process";
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { localizedLanguages, localizedUrl } from "@/lib/seo";
+import { localizedUrl } from "@/lib/seo";
 
 type Page = {
   path: string;
   sources: string[];
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
   priority: number;
+  locales?: string[];
 };
 
 const PAGES: Page[] = [
@@ -28,6 +29,7 @@ const PAGES: Page[] = [
     sources: ["src/app/[locale]/tos/page.tsx"],
     changeFrequency: "yearly",
     priority: 0.4,
+    locales: ["en"],
   },
 ];
 
@@ -45,15 +47,23 @@ function lastModified(sources: string[]): Date | undefined {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return PAGES.flatMap(({ path, sources, changeFrequency, priority }) => {
-    const languages = localizedLanguages(path);
-    const modified = lastModified(sources);
-    return routing.locales.map((locale) => ({
-      url: localizedUrl(path, locale),
-      ...(modified ? { lastModified: modified } : {}),
-      changeFrequency,
-      priority,
-      alternates: { languages },
-    }));
-  });
+  return PAGES.flatMap(
+    ({ path, sources, changeFrequency, priority, locales }) => {
+      const pageLocales = locales ?? routing.locales;
+      const modified = lastModified(sources);
+      const languages = {
+        "x-default": localizedUrl(path, routing.defaultLocale),
+        ...Object.fromEntries(
+          pageLocales.map((locale) => [locale, localizedUrl(path, locale)]),
+        ),
+      };
+      return pageLocales.map((locale) => ({
+        url: localizedUrl(path, locale),
+        ...(modified ? { lastModified: modified } : {}),
+        changeFrequency,
+        priority,
+        alternates: { languages },
+      }));
+    },
+  );
 }

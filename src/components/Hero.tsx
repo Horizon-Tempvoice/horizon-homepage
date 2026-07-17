@@ -57,6 +57,7 @@ export default async function Hero({
               alt="Horizon Discord Bot - Temporary Voice Channels"
               width={480}
               height={480}
+              sizes="(min-width: 1024px) 480px, 0px"
               className="relative rounded-3xl w-full max-w-md mx-auto floating"
               priority
             />

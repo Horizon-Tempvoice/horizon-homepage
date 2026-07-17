@@ -57,6 +57,18 @@ async function buildSchemas(locale: string) {
     },
   };
 
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: "Horizon",
+    inLanguage: isDE ? "de-DE" : "en-US",
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+  };
+
   const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -84,7 +96,7 @@ async function buildSchemas(locale: string) {
     })),
   };
 
-  return { organization, softwareApp, faqPage };
+  return { website, organization, softwareApp, faqPage };
 }
 
 export default async function Home({
@@ -95,13 +107,19 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const { organization, softwareApp, faqPage } = await buildSchemas(locale);
+  const { website, organization, softwareApp, faqPage } =
+    await buildSchemas(locale);
 
   return (
     <main
       key={locale}
       className="bg-[#080a10] text-[#dde2f0] overflow-x-hidden animate-page-fade [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-[#00A0FF]"
     >
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static, trusted JSON-LD data
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
+      />
       <script
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: static, trusted JSON-LD data

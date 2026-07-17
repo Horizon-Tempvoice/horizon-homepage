@@ -27,3 +27,16 @@ export function localizedAlternates(
     languages: localizedLanguages(path),
   };
 }
+
+export function enOnlyAlternates(
+  path: string,
+): NonNullable<Metadata["alternates"]> {
+  const url = localizedUrl(path, routing.defaultLocale);
+  return {
+    canonical: url,
+    languages: {
+      "x-default": url,
+      [routing.defaultLocale]: url,
+    },
+  };
+}
