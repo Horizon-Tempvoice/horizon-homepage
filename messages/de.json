@@ -120,6 +120,17 @@
     "description": "Horizon ist der einfachste Weg, Sprachkanäle auf Discord zu verwalten. Temporäre Räume, die bei Bedarf erscheinen und verschwinden, wenn sie nicht mehr gebraucht werden. Alles auf Discord konfigurierbar.",
     "quickLinks": "Schnelllinks",
     "links": "Links",
+    "otherProjects": "Andere Projekte",
+    "projects": {
+      "tokn": {
+        "name": "Tokn Authenticator",
+        "description": "Dein 2FA-Authenticator für Android. Datenschutzorientiert."
+      },
+      "agc": {
+        "name": "Anime & Gaming Café",
+        "description": "Deine Anime- und Gaming-Community auf Discord."
+      }
+    },
     "nav": {
       "home": "Startseite",
       "features": "Funktionen",

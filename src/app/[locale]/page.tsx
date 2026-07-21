@@ -81,6 +81,18 @@ async function buildSchemas(locale: string) {
       "https://topstats.gg/discord/bots/1463545589907197996",
       "https://support.horizon-bot.me",
     ],
+    owns: [
+      {
+        "@type": "SoftwareApplication",
+        name: "Tokn Authenticator",
+        url: "https://usetokn.app",
+      },
+      {
+        "@type": "Organization",
+        name: "Anime & Gaming Café",
+        url: "https://animegamingcafe.de",
+      },
+    ],
   };
 
   const faqPage = {

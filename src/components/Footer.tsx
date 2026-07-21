@@ -10,7 +10,7 @@ export default async function Footer() {
   return (
     <footer className="text-white py-16 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <Image
               src="/logo.png"
@@ -49,7 +49,7 @@ export default async function Footer() {
                 <Link
                   href="https://invite.horizon-bot.me"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t("nav.invite")}
@@ -59,7 +59,7 @@ export default async function Footer() {
                 <Link
                   href="https://support.horizon-bot.me"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t("nav.support")}
@@ -69,7 +69,7 @@ export default async function Footer() {
                 <Link
                   href="https://docs.horizon-bot.me"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t("nav.docs")}
@@ -79,7 +79,7 @@ export default async function Footer() {
                 <Link
                   href="https://translate.horizon-bot.me"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t("nav.translate")}
@@ -93,6 +93,41 @@ export default async function Footer() {
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t("nav.stats")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-xl font-semibold mb-4">{t("otherProjects")}</h4>
+            <ul className="space-y-4">
+              <li>
+                <Link
+                  href="https://usetokn.app"
+                  target="_blank"
+                  rel="noopener"
+                  className="group block"
+                >
+                  <span className="text-white/70 group-hover:text-white transition-colors">
+                    {t("projects.tokn.name")}
+                  </span>
+                  <span className="block text-sm text-white/40 group-hover:text-white/60 transition-colors">
+                    {t("projects.tokn.description")}
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://animegamingcafe.de"
+                  target="_blank"
+                  rel="noopener"
+                  className="group block"
+                >
+                  <span className="text-white/70 group-hover:text-white transition-colors">
+                    {t("projects.agc.name")}
+                  </span>
+                  <span className="block text-sm text-white/40 group-hover:text-white/60 transition-colors">
+                    {t("projects.agc.description")}
+                  </span>
                 </Link>
               </li>
             </ul>
